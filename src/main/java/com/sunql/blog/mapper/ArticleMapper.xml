@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sunql.blog.mapper.ArticleMapper">
-
+    <select id="selectAll" resultType="com.sunql.blog.entity.Article">
+        SELECT * FROM article Order By updata_time Desc
+    </select>
+    <select id="selectArticleList" resultType="com.sunql.blog.entity.Article">
+        SELECT * FROM article where user_id=#{user_id} Order By updata_time Desc
+    </select>
+    <select id="selectArticleOne" resultType="com.sunql.blog.entity.Article">
+        SELECT * FROM article where user_id=#{user_id} and id=#{id} LIMIT 1
+    </select>
 </mapper>

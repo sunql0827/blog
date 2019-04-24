@@ -1,0 +1,317 @@
+2019-04-24 15:48:21.916 [main] INFO  com.sunql.blog.BlogApplication - Starting BlogApplication on M81OGMXBVOO2F7H with PID 15860 (J:\work\blog\target\classes started by Administrator in J:\work\blog)
+2019-04-24 15:48:21.921 [main] DEBUG com.sunql.blog.BlogApplication - Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-04-24 15:48:21.921 [main] INFO  com.sunql.blog.BlogApplication - The following profiles are active: dev
+2019-04-24 15:48:24.095 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-04-24 15:48:24.107 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-04-24 15:48:24.108 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-24 15:48:24.119 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.14] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+2019-04-24 15:48:24.120 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.14] using APR version [1.6.2].
+2019-04-24 15:48:24.120 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-04-24 15:48:24.120 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-04-24 15:48:25.202 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2l  25 May 2017]
+2019-04-24 15:48:25.372 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-04-24 15:48:25.669 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-04-24 15:48:25.962 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-04-24 15:48:26.523 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Login.
+2019-04-24 15:48:27.528 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-04-24 15:48:27.617 [main] INFO  com.sunql.blog.BlogApplication - Started BlogApplication in 6.463 seconds (JVM running for 17.384)
+2019-04-24 16:38:31.826 [http-nio-8080-exec-6] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-24 16:38:32.000 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==>  Preparing: SELECT * FROM article Order By updata_time Desc 
+2019-04-24 16:38:32.043 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==> Parameters: 
+2019-04-24 16:38:32.116 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - <==      Total: 15
+2019-04-24 16:38:35.345 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro FROM article WHERE user_id = ? 
+2019-04-24 16:38:35.346 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 16:38:35.357 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - <==      Total: 11
+2019-04-24 16:38:35.359 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==>  Preparing: SELECT id,add_time,article_size,title,updata_time,user_id FROM anthology WHERE user_id = ? 
+2019-04-24 16:38:35.360 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 16:38:35.364 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - <==      Total: 4
+2019-04-24 16:39:54.502 [http-nio-8080-exec-9] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'title' is not present]
+2019-04-24 16:39:55.841 [http-nio-8080-exec-4] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'title' is not present]
+2019-04-24 16:40:06.474 [http-nio-8080-exec-3] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'title' is not present]
+2019-04-24 16:40:57.689 [http-nio-8080-exec-2] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'title' is not present]
+2019-04-24 17:35:47.534 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro FROM article WHERE user_id = ? 
+2019-04-24 17:35:47.535 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 17:35:47.543 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - <==      Total: 11
+2019-04-24 17:35:47.544 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==>  Preparing: SELECT id,add_time,article_size,title,updata_time,user_id FROM anthology WHERE user_id = ? 
+2019-04-24 17:35:47.544 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 17:35:47.548 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - <==      Total: 4
+2019-04-24 17:36:16.231 [http-nio-8080-exec-7] DEBUG c.sunql.blog.mapper.ArticleMapper.selectArticleOne - ==>  Preparing: SELECT * FROM article where user_id=? and id=? LIMIT 1 
+2019-04-24 17:36:16.232 [http-nio-8080-exec-7] DEBUG c.sunql.blog.mapper.ArticleMapper.selectArticleOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String), 14(Integer)
+2019-04-24 17:36:16.234 [http-nio-8080-exec-7] DEBUG c.sunql.blog.mapper.ArticleMapper.selectArticleOne - <==      Total: 1
+2019-04-24 17:36:16.242 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.ArticleMapper.updateById - ==>  Preparing: UPDATE article SET add_time=?, art_desc=?, art_title=?, art_type=?, comment=?, islike=?, isread=?, is_release=?, updata_time=?, user_id=?, words=?, intro=? WHERE id=? 
+2019-04-24 17:36:16.252 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.ArticleMapper.updateById - ==> Parameters: 1550325214706(Long), <div><span style="font-size: 19.2px;">我想说我有错吗？</span></div><div><span style="font-size: 19.2px;">如果说我没有错，那么是谁让我变成了现在这个样子，</span></div><div><span style="font-size: 19.2px;">我也不愿愿意，我也不想这样。</span></div><div><span style="font-size: 19.2px;">我曾经也想灿烂地笑过，是谁一路把我拉向了深渊。曾经我背着书包，天真以为上学的路上是美好，是谁把我拉到了黑暗角落，对我敲诈勒索，可笑的是，勒索我的那个是还是我同桌的亲哥，是他亲哥，你说可笑不可笑。你以为我愿意接触这样的黑暗吗？</span></div><div><span style="font-size: 19.2px;">我从小就努力地生活着，我想实现自我，我想要活着的样子，我有梦想，我在寒冬自己在淤泥里摸索，我为了自己唯一次生日足足努力了整整半年，我不停地努力着，但是这个社会的黑暗却一次又一次地拿着刺刀扎向我。</span></div><div><span style="font-size: 19.2px;">我想要为家里减轻负担，我想要看看外面的时间，但是那些黑色的爪牙一次又一次地伸手过来，黑中介的指引，我在深夜晕倒在厂房外面，我在40多度火炉城市烤火。我依旧选择努力，我不停地爬起来重新开始。</span></div><div><span style="font-size: 19.2px;">我曾经以为自己很强大的，但是黑手们又向我开了一个玩笑，这是我第一次走进派出所，原来派出所的样子是这样的，冰冷无情，拳打脚踢，所以是我错了？</span></div><div><span style="font-size: 19.2px;">那天从那里出来，天空的太阳特别刺眼.....</span></div><div><span style="font-size: 19.2px;">我开始努力，不再纠结过往，开始开拓自己的生活，我不停地弥补，但是我好像是被生活特别照顾的哪个.....在校招里还能让我遇到医疗诈骗团伙，这是多么有趣的体验，所以我有错吗？这是谁TM的错。</span></div><div><span style="font-size: 19.2px;">绝望，麻木，抑郁，埋汰自我.....一次又一次地让自己坚强，我懦弱地拒绝了一切，结果.....又是电视偶像剧版剧情，绿色出租屋剧情，我曾经很向往爱情，但是这次却败给了金钱，结论来了一个喜当爹,"我怀了他的孩子，他不想要，但是我想生下来，我可以和你住在一起把孩子生下来吗？"，一次又一次，真的很有趣。</span></div><div><span style="font-size: 19.2px;">我不停地告诉自己，相信生活，相信未来，相信梦想....</span></div><div><span style="font-size: 19.2px;">但是呢？酒托诈骗，网络诈骗，电信诈骗.....我逃避.....我想要逃避这个黑暗的国度,当我踏出这个世界，迎接我的又是另一篇黑暗，我绝望、我沉沦，我迷茫......我回来再次相信自己，我想再次活一次，但是人生真的很喜欢玩弄于我，传销？1040？这就是曾经所谓朋友，这就是口中的兄弟。</span></div><div><span style="font-size: 19.2px;">我不想拥抱黑暗，但是黑暗每次总是将我带入深渊，我挣扎着，我不停地提醒自己保持清醒。</span></div><div><span style="font-size: 19.2px;">我不想去揭开自己的伤疤，但是体无完肤后，我随处都是伤疤，我想要不去提及，去告诉自己没关系一切都已经过去，但是夜晚每天都会来，夜晚总是那么长，我讨厌黑暗，我憎恶黑暗。</span></div><div><span style="font-size: 19.2px;">我也想拥抱光明，但是光明在哪里？</span></div>(String), 我有错吗？(String), 3(Integer), 0(Integer), 0(Integer), 55(Integer), 0(Integer), 1556098576235(Long), MnF/9XPJEprPvk/EwSLBAg==(String), 1754(Integer), <div><span style="fo(String), 14(Integer)
+2019-04-24 17:36:16.255 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.ArticleMapper.updateById - <==    Updates: 1
+2019-04-24 17:36:20.155 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==>  Preparing: SELECT * FROM article Order By updata_time Desc 
+2019-04-24 17:36:20.155 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==> Parameters: 
+2019-04-24 17:36:20.162 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - <==      Total: 15
+2019-04-24 17:36:21.916 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro FROM article WHERE id=? 
+2019-04-24 17:36:21.916 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - ==> Parameters: 30(Integer)
+2019-04-24 17:36:21.918 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - <==      Total: 1
+2019-04-24 17:36:21.951 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-04-24 17:36:21.952 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: 3lB62WC2obOnr8PsZBREdQ==(String)
+2019-04-24 17:36:21.957 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-04-24 17:36:25.334 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==>  Preparing: SELECT * FROM article Order By updata_time Desc 
+2019-04-24 17:36:25.335 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==> Parameters: 
+2019-04-24 17:36:25.342 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - <==      Total: 15
+2019-04-24 17:36:26.575 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro FROM article WHERE id=? 
+2019-04-24 17:36:26.576 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - ==> Parameters: 14(Integer)
+2019-04-24 17:36:26.578 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - <==      Total: 1
+2019-04-24 17:36:26.581 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-04-24 17:36:26.581 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 17:36:26.583 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-04-24 17:36:35.655 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==>  Preparing: SELECT * FROM article Order By updata_time Desc 
+2019-04-24 17:36:35.656 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==> Parameters: 
+2019-04-24 17:36:35.661 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - <==      Total: 15
+2019-04-24 17:36:49.001 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro FROM article WHERE id=? 
+2019-04-24 17:36:49.002 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - ==> Parameters: 14(Integer)
+2019-04-24 17:36:49.004 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - <==      Total: 1
+2019-04-24 17:36:49.006 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-04-24 17:36:49.007 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 17:36:49.010 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-04-24 17:37:04.711 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==>  Preparing: SELECT * FROM article Order By updata_time Desc 
+2019-04-24 17:37:04.712 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==> Parameters: 
+2019-04-24 17:37:04.719 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - <==      Total: 15
+2019-04-24 17:37:13.121 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro FROM article WHERE id=? 
+2019-04-24 17:37:13.122 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - ==> Parameters: 14(Integer)
+2019-04-24 17:37:13.125 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - <==      Total: 1
+2019-04-24 17:37:13.128 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-04-24 17:37:13.129 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 17:37:13.131 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-04-24 17:38:08.758 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro FROM article WHERE id=? 
+2019-04-24 17:38:08.759 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - ==> Parameters: 14(Integer)
+2019-04-24 17:38:08.760 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - <==      Total: 1
+2019-04-24 17:38:08.762 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-04-24 17:38:08.762 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 17:38:08.764 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-04-24 17:38:31.895 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==>  Preparing: SELECT * FROM article Order By updata_time Desc 
+2019-04-24 17:38:31.895 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==> Parameters: 
+2019-04-24 17:38:31.901 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - <==      Total: 15
+2019-04-24 17:38:33.009 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro FROM article WHERE id=? 
+2019-04-24 17:38:33.010 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - ==> Parameters: 14(Integer)
+2019-04-24 17:38:33.012 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - <==      Total: 1
+2019-04-24 17:38:33.014 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-04-24 17:38:33.014 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 17:38:33.016 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-04-24 17:38:46.021 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==>  Preparing: SELECT * FROM article Order By updata_time Desc 
+2019-04-24 17:38:46.022 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==> Parameters: 
+2019-04-24 17:38:46.026 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - <==      Total: 15
+2019-04-24 17:38:49.161 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro FROM article WHERE id=? 
+2019-04-24 17:38:49.161 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - ==> Parameters: 14(Integer)
+2019-04-24 17:38:49.163 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - <==      Total: 1
+2019-04-24 17:38:49.165 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-04-24 17:38:49.165 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 17:38:49.167 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-04-24 17:39:54.954 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro FROM article WHERE id=? 
+2019-04-24 17:39:54.955 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - ==> Parameters: 14(Integer)
+2019-04-24 17:39:54.957 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - <==      Total: 1
+2019-04-24 17:39:54.959 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-04-24 17:39:54.959 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 17:39:54.961 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-04-24 17:40:21.255 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==>  Preparing: SELECT * FROM article Order By updata_time Desc 
+2019-04-24 17:40:21.255 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==> Parameters: 
+2019-04-24 17:40:21.260 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - <==      Total: 15
+2019-04-24 17:40:23.681 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==>  Preparing: SELECT * FROM article Order By updata_time Desc 
+2019-04-24 17:40:23.681 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==> Parameters: 
+2019-04-24 17:40:23.686 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - <==      Total: 15
+2019-04-24 17:40:25.155 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro FROM article WHERE id=? 
+2019-04-24 17:40:25.156 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - ==> Parameters: 14(Integer)
+2019-04-24 17:40:25.157 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - <==      Total: 1
+2019-04-24 17:40:25.159 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-04-24 17:40:25.160 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 17:40:25.162 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-04-24 17:40:47.819 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==>  Preparing: SELECT * FROM article Order By updata_time Desc 
+2019-04-24 17:40:47.819 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==> Parameters: 
+2019-04-24 17:40:47.823 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - <==      Total: 15
+2019-04-24 17:40:51.646 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro FROM article WHERE id=? 
+2019-04-24 17:40:51.646 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - ==> Parameters: 14(Integer)
+2019-04-24 17:40:51.648 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - <==      Total: 1
+2019-04-24 17:40:51.649 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-04-24 17:40:51.650 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 17:40:51.651 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-04-24 17:46:28.823 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro FROM article WHERE id=? 
+2019-04-24 17:46:28.824 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - ==> Parameters: 14(Integer)
+2019-04-24 17:46:28.825 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - <==      Total: 1
+2019-04-24 17:46:28.826 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-04-24 17:46:28.827 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 17:46:28.828 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-04-24 17:46:38.979 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==>  Preparing: SELECT * FROM article Order By updata_time Desc 
+2019-04-24 17:46:38.980 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==> Parameters: 
+2019-04-24 17:46:38.985 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - <==      Total: 15
+2019-04-24 17:46:43.377 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro FROM article WHERE id=? 
+2019-04-24 17:46:43.378 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - ==> Parameters: 13(Integer)
+2019-04-24 17:46:43.380 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - <==      Total: 1
+2019-04-24 17:46:43.382 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-04-24 17:46:43.382 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 17:46:43.385 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-04-24 17:46:47.105 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==>  Preparing: SELECT * FROM article Order By updata_time Desc 
+2019-04-24 17:46:47.105 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==> Parameters: 
+2019-04-24 17:46:47.111 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - <==      Total: 15
+2019-04-24 17:46:49.458 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro FROM article WHERE user_id = ? 
+2019-04-24 17:46:49.459 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 17:46:49.463 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - <==      Total: 11
+2019-04-24 17:46:49.464 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==>  Preparing: SELECT id,add_time,article_size,title,updata_time,user_id FROM anthology WHERE user_id = ? 
+2019-04-24 17:46:49.464 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 17:46:49.467 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - <==      Total: 4
+2019-04-24 17:47:06.028 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-04-24 17:47:06.028 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 17:47:06.030 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-04-24 17:47:06.032 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectOne - ==>  Preparing: SELECT id,add_time,article_size,title,updata_time,user_id FROM anthology WHERE title = ? 
+2019-04-24 17:47:06.033 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectOne - ==> Parameters: 散文(String)
+2019-04-24 17:47:06.034 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectOne - <==      Total: 0
+2019-04-24 17:47:06.039 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.AnthologyMapper.insert - ==>  Preparing: INSERT INTO anthology ( id, add_time, article_size, title, updata_time, user_id ) VALUES ( ?, ?, ?, ?, ?, ? ) 
+2019-04-24 17:47:06.040 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.AnthologyMapper.insert - ==> Parameters: 0(Integer), 1556099226035(Long), 0(Integer), MnF/9XPJEprPvk/EwSLBAg==(String), 1556099226035(Long), MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 17:47:06.042 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.AnthologyMapper.insert - <==    Updates: 1
+2019-04-24 17:47:10.891 [http-nio-8080-exec-2] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'uid' is not present]
+2019-04-24 17:47:49.796 [http-nio-8080-exec-1] DEBUG c.sunql.blog.mapper.ArticleMapper.selectArticleOne - ==>  Preparing: SELECT * FROM article where user_id=? and id=? LIMIT 1 
+2019-04-24 17:47:49.796 [http-nio-8080-exec-1] DEBUG c.sunql.blog.mapper.ArticleMapper.selectArticleOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String), 25(Integer)
+2019-04-24 17:47:49.798 [http-nio-8080-exec-1] DEBUG c.sunql.blog.mapper.ArticleMapper.selectArticleOne - <==      Total: 1
+2019-04-24 17:47:49.801 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.ArticleMapper.updateById - ==>  Preparing: UPDATE article SET add_time=?, art_desc=?, art_title=?, art_type=?, comment=?, islike=?, isread=?, is_release=?, updata_time=?, user_id=?, words=?, intro=? WHERE id=? 
+2019-04-24 17:47:49.802 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.ArticleMapper.updateById - ==> Parameters: 1550582247152(Long), 我有一个梦(String), 每天一个梦(String), 3(Integer), 0(Integer), 0(Integer), 123(Integer), 0(Integer), 1556099269799(Long), MnF/9XPJEprPvk/EwSLBAg==(String), 5(Integer), 我有一个梦(String), 25(Integer)
+2019-04-24 17:47:49.803 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.ArticleMapper.updateById - <==    Updates: 1
+2019-04-24 17:47:55.829 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==>  Preparing: SELECT * FROM article Order By updata_time Desc 
+2019-04-24 17:47:55.831 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==> Parameters: 
+2019-04-24 17:47:55.835 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - <==      Total: 15
+2019-04-24 17:47:57.317 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro FROM article WHERE user_id = ? 
+2019-04-24 17:47:57.317 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 17:47:57.322 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - <==      Total: 11
+2019-04-24 17:47:57.323 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==>  Preparing: SELECT id,add_time,article_size,title,updata_time,user_id FROM anthology WHERE user_id = ? 
+2019-04-24 17:47:57.323 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 17:47:57.327 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - <==      Total: 5
+2019-04-24 17:51:44.360 [main] INFO  com.sunql.blog.BlogApplication - Starting BlogApplication on M81OGMXBVOO2F7H with PID 12784 (J:\work\blog\target\classes started by Administrator in J:\work\blog)
+2019-04-24 17:51:44.368 [main] DEBUG com.sunql.blog.BlogApplication - Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-04-24 17:51:44.368 [main] INFO  com.sunql.blog.BlogApplication - The following profiles are active: dev
+2019-04-24 17:51:47.218 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-04-24 17:51:47.231 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-04-24 17:51:47.232 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-24 17:51:47.243 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.14] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+2019-04-24 17:51:47.244 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.14] using APR version [1.6.2].
+2019-04-24 17:51:47.244 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-04-24 17:51:47.244 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-04-24 17:51:48.336 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2l  25 May 2017]
+2019-04-24 17:51:48.490 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-04-24 17:51:48.826 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-04-24 17:51:49.144 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-04-24 17:51:49.699 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Login.
+2019-04-24 17:51:50.433 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-04-24 17:51:50.543 [main] INFO  com.sunql.blog.BlogApplication - Started BlogApplication in 7.29 seconds (JVM running for 15.636)
+2019-04-24 17:51:55.461 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-24 17:51:55.702 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==>  Preparing: SELECT * FROM article Order By updata_time Desc 
+2019-04-24 17:51:55.770 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==> Parameters: 
+2019-04-24 17:51:55.872 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - <==      Total: 15
+2019-04-24 17:51:59.098 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==>  Preparing: SELECT * FROM article Order By updata_time Desc 
+2019-04-24 17:51:59.098 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==> Parameters: 
+2019-04-24 17:51:59.113 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - <==      Total: 15
+2019-04-24 17:52:03.923 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro FROM article WHERE user_id = ? 
+2019-04-24 17:52:03.923 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 17:52:03.930 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - <==      Total: 11
+2019-04-24 17:52:03.931 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==>  Preparing: SELECT id,add_time,article_size,title,updata_time,user_id FROM anthology WHERE user_id = ? 
+2019-04-24 17:52:03.932 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 17:52:03.938 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - <==      Total: 4
+2019-04-24 17:52:11.582 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-04-24 17:52:11.584 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 17:52:11.588 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-04-24 17:52:11.589 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectOne - ==>  Preparing: SELECT id,add_time,article_size,title,updata_time,user_id FROM anthology WHERE title = ? 
+2019-04-24 17:52:11.590 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectOne - ==> Parameters: 散文(String)
+2019-04-24 17:52:11.591 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectOne - <==      Total: 0
+2019-04-24 17:52:11.594 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.AnthologyMapper.insert - ==>  Preparing: INSERT INTO anthology ( id, add_time, article_size, title, updata_time, user_id ) VALUES ( ?, ?, ?, ?, ?, ? ) 
+2019-04-24 17:52:11.595 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.AnthologyMapper.insert - ==> Parameters: 0(Integer), 1556099531591(Long), 0(Integer), 散文(String), 1556099531591(Long), MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 17:52:11.596 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.AnthologyMapper.insert - <==    Updates: 1
+2019-04-24 17:52:14.918 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==>  Preparing: SELECT * FROM article Order By updata_time Desc 
+2019-04-24 17:52:14.919 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==> Parameters: 
+2019-04-24 17:52:14.925 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - <==      Total: 15
+2019-04-24 17:52:16.664 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro FROM article WHERE user_id = ? 
+2019-04-24 17:52:16.665 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 17:52:16.670 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - <==      Total: 11
+2019-04-24 17:52:16.672 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==>  Preparing: SELECT id,add_time,article_size,title,updata_time,user_id FROM anthology WHERE user_id = ? 
+2019-04-24 17:52:16.672 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 17:52:16.674 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - <==      Total: 5
+2019-04-24 17:52:27.800 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==>  Preparing: SELECT * FROM article Order By updata_time Desc 
+2019-04-24 17:52:27.801 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==> Parameters: 
+2019-04-24 17:52:27.806 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - <==      Total: 15
+2019-04-24 17:52:30.985 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro FROM article WHERE id=? 
+2019-04-24 17:52:30.986 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - ==> Parameters: 25(Integer)
+2019-04-24 17:52:30.988 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - <==      Total: 1
+2019-04-24 17:52:30.991 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-04-24 17:52:30.992 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 17:52:30.994 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-04-24 17:52:33.673 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==>  Preparing: SELECT * FROM article Order By updata_time Desc 
+2019-04-24 17:52:33.673 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==> Parameters: 
+2019-04-24 17:52:33.681 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - <==      Total: 15
+2019-04-24 17:52:35.840 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro FROM article WHERE id=? 
+2019-04-24 17:52:35.840 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - ==> Parameters: 13(Integer)
+2019-04-24 17:52:35.843 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - <==      Total: 1
+2019-04-24 17:52:35.846 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-04-24 17:52:35.847 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 17:52:35.850 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-04-24 17:52:43.082 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==>  Preparing: SELECT * FROM article Order By updata_time Desc 
+2019-04-24 17:52:43.082 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==> Parameters: 
+2019-04-24 17:52:43.090 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - <==      Total: 15
+2019-04-24 17:52:46.098 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro FROM article WHERE user_id = ? 
+2019-04-24 17:52:46.099 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 17:52:46.104 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - <==      Total: 11
+2019-04-24 17:52:46.106 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==>  Preparing: SELECT id,add_time,article_size,title,updata_time,user_id FROM anthology WHERE user_id = ? 
+2019-04-24 17:52:46.106 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 17:52:46.109 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - <==      Total: 5
+2019-04-24 17:53:43.232 [http-nio-8080-exec-3] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'uid' is not present]
+2019-04-24 17:53:43.922 [http-nio-8080-exec-4] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'uid' is not present]
+2019-04-24 17:53:44.344 [http-nio-8080-exec-5] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'uid' is not present]
+2019-04-24 17:53:44.537 [http-nio-8080-exec-6] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'uid' is not present]
+2019-04-24 17:53:44.712 [http-nio-8080-exec-7] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'uid' is not present]
+2019-04-24 17:53:44.888 [http-nio-8080-exec-8] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'uid' is not present]
+2019-04-24 17:53:45.601 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==>  Preparing: SELECT * FROM article Order By updata_time Desc 
+2019-04-24 17:53:45.602 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==> Parameters: 
+2019-04-24 17:53:45.606 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - <==      Total: 15
+2019-04-24 17:53:59.180 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro FROM article WHERE user_id = ? 
+2019-04-24 17:53:59.180 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 17:53:59.184 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - <==      Total: 11
+2019-04-24 17:53:59.187 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==>  Preparing: SELECT id,add_time,article_size,title,updata_time,user_id FROM anthology WHERE user_id = ? 
+2019-04-24 17:53:59.188 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 17:53:59.190 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - <==      Total: 5
+2019-04-24 17:54:01.234 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==>  Preparing: SELECT * FROM article Order By updata_time Desc 
+2019-04-24 17:54:01.235 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==> Parameters: 
+2019-04-24 17:54:01.242 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - <==      Total: 15
+2019-04-24 17:54:10.767 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro FROM article WHERE id=? 
+2019-04-24 17:54:10.768 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - ==> Parameters: 13(Integer)
+2019-04-24 17:54:10.770 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - <==      Total: 1
+2019-04-24 17:54:10.772 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-04-24 17:54:10.773 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 17:54:10.774 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-04-24 17:54:19.168 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro FROM article WHERE user_id = ? 
+2019-04-24 17:54:19.169 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 17:54:19.182 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - <==      Total: 11
+2019-04-24 17:54:19.182 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==>  Preparing: SELECT id,add_time,article_size,title,updata_time,user_id FROM anthology WHERE user_id = ? 
+2019-04-24 17:54:19.183 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 17:54:19.185 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - <==      Total: 5
+2019-04-24 17:54:37.931 [http-nio-8080-exec-4] DEBUG c.sunql.blog.mapper.ArticleMapper.selectArticleOne - ==>  Preparing: SELECT * FROM article where user_id=? and id=? LIMIT 1 
+2019-04-24 17:54:37.931 [http-nio-8080-exec-4] DEBUG c.sunql.blog.mapper.ArticleMapper.selectArticleOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String), 22(Integer)
+2019-04-24 17:54:37.932 [http-nio-8080-exec-4] DEBUG c.sunql.blog.mapper.ArticleMapper.selectArticleOne - <==      Total: 1
+2019-04-24 17:54:37.941 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.ArticleMapper.updateById - ==>  Preparing: UPDATE article SET add_time=?, art_desc=?, art_title=?, art_type=?, comment=?, islike=?, isread=?, is_release=?, updata_time=?, user_id=?, words=?, intro=? WHERE id=? 
+2019-04-24 17:54:37.941 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.ArticleMapper.updateById - ==> Parameters: 1550582032032(Long), 测试测试手动阀手动阀手动阀手动阀撒旦(String), 测试测试(String), 3(Integer), 0(Integer), 0(Integer), 543(Integer), 0(Integer), 1556099677934(Long), MnF/9XPJEprPvk/EwSLBAg==(String), 18(Integer), 测试测试手动阀手动阀手动阀手动阀撒旦(String), 22(Integer)
+2019-04-24 17:54:37.943 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.ArticleMapper.updateById - <==    Updates: 1
+2019-04-24 17:55:43.677 [http-nio-8080-exec-6] DEBUG c.sunql.blog.mapper.ArticleMapper.selectArticleOne - ==>  Preparing: SELECT * FROM article where user_id=? and id=? LIMIT 1 
+2019-04-24 17:55:43.677 [http-nio-8080-exec-6] DEBUG c.sunql.blog.mapper.ArticleMapper.selectArticleOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String), 19(Integer)
+2019-04-24 17:55:43.678 [http-nio-8080-exec-6] DEBUG c.sunql.blog.mapper.ArticleMapper.selectArticleOne - <==      Total: 1
+2019-04-24 17:55:43.681 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.updateById - ==>  Preparing: UPDATE article SET add_time=?, art_desc=?, art_title=?, art_type=?, comment=?, islike=?, isread=?, is_release=?, updata_time=?, user_id=?, words=?, intro=? WHERE id=? 
+2019-04-24 17:55:43.683 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.updateById - ==> Parameters: 1550581333336(Long), <div><div><p>3月5日，闲鱼宣布在GitHub上开源Fish Redux，Fish Redux是一个基于 Redux 数据管理的组装式 flutter 应用框架， 特别适用于构建中大型的复杂应用，它最显著的特征是 函数式的编程模型、可预测的状态管理、可插拔的组件体系、最佳的性能表现。下文中，我们将详细介绍Fish Redux的特点和使用过程，以下内容来自InfoQ独家对闲鱼Flutter团队的采访和Fish Redux的开源文档。</p>
+<h2>开源背景</h2>
+<p>在闲鱼接入Flutter之初，由于我们的落地的方案希望是从最复杂的几个主链路进行尝试来验证flutter完备性的，而我们的详情整体来讲业务比较复杂，主要体现在两个方面：</p>
+<ul>
+<li>页面需要集中状态管理，也就是说页面的不同组件共享一个数据来源，数据来源变化需要通知页面所有组件。</li>
+<li>页面的UI展现形式比较多（如普通详情、闲鱼币详情、社区详情、拍卖详情等），工作量大，所以UI组件需要尽可能复用，也就是说需要比较好的进行组件化切分。</li>
+</ul>
+<p>在我们尝试使用市面上已有的框架（google提供的redux以及bloc）的时候发现，没有任何一个框架可以既解决集中状态管理，又能解决UI的组件化的，因为本身这两个问题有一定的矛盾性（集中vs分治）。因此我们希望有一套框架能解决我们的问题，fish redux应运而生。</p>
+<p>fish redux本身是经过比较多次的迭代的，目前大家看到的版本经过了3次比较大的迭代，实际上也是经过了团队比较多的讨论和思考。</p>
+<p>第一个版本是基于社区内的flutter_redux进行的改造，核心是提供了UI代码的组件化，当然问题也非常明显，针对复杂的详情和发布业务，往往业务逻辑很多，无法做到逻辑代码的组件化。</p>
+<p>第二个版本针对第一个版本的问题，做出了比较重大的修改，解决了UI代码和逻辑代码的分治问题，但同时，按照redux的标准，打破了redux的原则，对于精益求精的闲鱼团队来讲，不能接受；</p>
+<p>因此，在第三个版本进行重构时，我们确立了整体的架构原则与分层要求，一方面按照reduxjs的代码进行了flutter侧的redux实现，将redux的原则完整保留下来。另一方面针对组件化的问题，提供了redux之上的component的封装，并创新的通过这一层的架构设计提供了业务代码分治的能力。</p>
+<p>至此，我们完成了fish redux的基本设计，但在后续的应用中，发现了业务组装以后的代码性能问题，针对该问题，我们再次提供了对应的adapter能力，保障了在长列表场景下的big cell问题。目前，fish redux已经在线上稳定运行超过3个月以上，未来，期待fish redux给社区带来更多的输入。</p></div><br><br>作者：阿里云云栖社区<br>链接：https://www.jianshu.com/p/02f8ab3f6871<br>来源：简书<br>简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。</div>(String), Flutter(String), 3(Integer), 0(Integer), 0(Integer), 23(Integer), 0(Integer), 1556099743679(Long), MnF/9XPJEprPvk/EwSLBAg==(String), 1340(Integer), 3月5日，闲鱼宣布在GitHub上开源F(String), 19(Integer)
+2019-04-24 17:55:43.685 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.updateById - <==    Updates: 1
+2019-04-24 17:55:58.896 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==>  Preparing: SELECT * FROM article Order By updata_time Desc 
+2019-04-24 17:55:58.897 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==> Parameters: 
+2019-04-24 17:55:58.902 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - <==      Total: 15
+2019-04-24 17:56:04.490 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro FROM article WHERE id=? 
+2019-04-24 17:56:04.491 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - ==> Parameters: 19(Integer)
+2019-04-24 17:56:04.493 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - <==      Total: 1
+2019-04-24 17:56:04.496 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-04-24 17:56:04.497 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-24 17:56:04.499 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1

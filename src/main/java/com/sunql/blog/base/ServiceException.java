@@ -1,5 +1,8 @@
 package com.sunql.blog.base;
 
+/**
+ * @author Administrator
+ */
 @SuppressWarnings("serial")
 public class ServiceException extends RuntimeException{
 	private Integer code;

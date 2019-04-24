@@ -18,7 +18,7 @@ public interface IUserService extends IService<User> {
      * @param userPwd
      * @return
      */
-    User onLogin(String userPhone, String userPwd);
+    User onLogin(String userPhone, String userPwd,String ip);
 
     /**
      * 注册用户

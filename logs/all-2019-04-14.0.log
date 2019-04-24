@@ -1,0 +1,26 @@
+2019-04-14 17:22:34.393 [main] INFO  com.sunql.blog.SampleTest - Starting SampleTest on M81OGMXBVOO2F7H with PID 3380 (started by Administrator in J:\work\blog)
+2019-04-14 17:22:34.397 [main] DEBUG com.sunql.blog.SampleTest - Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-04-14 17:22:34.397 [main] INFO  com.sunql.blog.SampleTest - The following profiles are active: dev
+2019-04-14 17:22:36.747 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-04-14 17:22:37.022 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-04-14 17:22:37.414 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Login.
+2019-04-14 17:22:37.559 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Anthology.
+2019-04-14 17:22:39.984 [main] INFO  com.sunql.blog.SampleTest - Started SampleTest in 6.179 seconds (JVM running for 8.794)
+2019-04-14 17:22:41.016 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectByMap - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-04-14 17:22:41.074 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectByMap - ==> Parameters: 3lB62WC2obOnr8PsZBREdQ==(String)
+2019-04-14 17:22:41.141 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectByMap - <==      Total: 1
+2019-04-14 17:22:41.314 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-04-14 17:22:41.397 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-04-14 17:23:25.010 [main] INFO  com.sunql.blog.SampleTest - Starting SampleTest on M81OGMXBVOO2F7H with PID 4352 (started by Administrator in J:\work\blog)
+2019-04-14 17:23:25.018 [main] DEBUG com.sunql.blog.SampleTest - Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-04-14 17:23:25.018 [main] INFO  com.sunql.blog.SampleTest - The following profiles are active: dev
+2019-04-14 17:23:28.392 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-04-14 17:23:28.620 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-04-14 17:23:29.027 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Login.
+2019-04-14 17:23:29.147 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Anthology.
+2019-04-14 17:23:31.555 [main] INFO  com.sunql.blog.SampleTest - Started SampleTest in 7.356 seconds (JVM running for 9.508)
+2019-04-14 17:23:32.003 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectByMap - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE user_name = ? 
+2019-04-14 17:23:32.062 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectByMap - ==> Parameters: 测试(String)
+2019-04-14 17:23:32.116 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectByMap - <==      Total: 3
+2019-04-14 17:23:32.134 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-04-14 17:23:32.151 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

@@ -16,16 +16,17 @@ import lombok.experimental.Accessors;
  * @since 2019-03-31
  */
 @Data
-@EqualsAndHashCode(callSuper = true)
-@Accessors(chain = true)
-@TableName(value = "user")
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @ApiModel("设备")
+@EqualsAndHashCode(callSuper = true)
+@Accessors(chain = true)
+@TableName(value = "user")
 public class User extends BaseEntity {
 
     private static final long serialVersionUID = 1L;
+    private Integer id;
     @ApiModelProperty("添加时间")
     private Long addTime;
     @ApiModelProperty("用户id")

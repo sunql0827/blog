@@ -9,7 +9,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -32,5 +34,12 @@ public class SampleTest {
         System.out.println(("----- selectAll method test ------"));
         User user = userMapper.loginUser("18716643045", "12345678");
         System.out.println(user.toString());
+    }
+    @Test
+    public void selectMap(){
+        Map<String,Object> map = new HashMap<>();
+        map.put("user_name","测试");
+       List<User>  users= userMapper.selectByMap(map);
+        users.forEach(System.out::println);
     }
 }

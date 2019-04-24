@@ -1,0 +1,79 @@
+2019-04-23 22:08:53.796 [main] INFO  com.sunql.blog.BlogApplication - Starting BlogApplication on M81OGMXBVOO2F7H with PID 12124 (J:\work\blog\target\classes started by Administrator in J:\work\blog)
+2019-04-23 22:08:53.796 [main] DEBUG com.sunql.blog.BlogApplication - Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-04-23 22:08:53.796 [main] INFO  com.sunql.blog.BlogApplication - The following profiles are active: dev
+2019-04-23 22:08:55.655 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-04-23 22:08:55.671 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-04-23 22:08:55.671 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-23 22:08:55.671 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.14] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+2019-04-23 22:08:55.671 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.14] using APR version [1.6.2].
+2019-04-23 22:08:55.671 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-04-23 22:08:55.671 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-04-23 22:08:56.749 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2l  25 May 2017]
+2019-04-23 22:08:56.889 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-04-23 22:08:57.155 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-04-23 22:08:57.421 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-04-23 22:08:57.811 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Login.
+2019-04-23 22:08:58.483 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-04-23 22:08:58.592 [main] INFO  com.sunql.blog.BlogApplication - Started BlogApplication in 5.438 seconds (JVM running for 12.453)
+2019-04-23 22:12:52.334 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-23 22:12:52.489 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==>  Preparing: SELECT * FROM article Order By updata_time Desc 
+2019-04-23 22:12:52.546 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - ==> Parameters: 
+2019-04-23 22:12:52.650 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.ArticleMapper.selectAll - <==      Total: 15
+2019-04-23 22:13:18.279 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro FROM article WHERE user_id = ? 
+2019-04-23 22:13:18.279 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-23 22:13:18.295 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - <==      Total: 11
+2019-04-23 22:13:18.295 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==>  Preparing: SELECT id,add_time,article_size,title,updata_time,user_id FROM anthology WHERE user_id = ? 
+2019-04-23 22:13:18.295 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-23 22:13:18.295 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - <==      Total: 4
+2019-04-23 22:14:18.828 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro FROM article WHERE user_id = ? 
+2019-04-23 22:14:18.828 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-23 22:14:18.843 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - <==      Total: 11
+2019-04-23 22:14:18.843 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==>  Preparing: SELECT id,add_time,article_size,title,updata_time,user_id FROM anthology WHERE user_id = ? 
+2019-04-23 22:14:18.843 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-23 22:14:18.843 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - <==      Total: 4
+2019-04-23 22:15:38.454 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro FROM article WHERE user_id = ? 
+2019-04-23 22:15:38.454 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-23 22:15:38.470 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - <==      Total: 11
+2019-04-23 22:15:38.470 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==>  Preparing: SELECT id,add_time,article_size,title,updata_time,user_id FROM anthology WHERE user_id = ? 
+2019-04-23 22:15:38.470 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-23 22:15:38.470 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - <==      Total: 4
+2019-04-23 22:21:01.931 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro FROM article WHERE user_id = ? 
+2019-04-23 22:21:01.931 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-23 22:21:01.931 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - <==      Total: 11
+2019-04-23 22:21:01.931 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==>  Preparing: SELECT id,add_time,article_size,title,updata_time,user_id FROM anthology WHERE user_id = ? 
+2019-04-23 22:21:01.931 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-04-23 22:21:01.947 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - <==      Total: 4
+2019-04-23 23:52:48.622 [main] INFO  com.sunql.blog.BlogApplication - Starting BlogApplication on M81OGMXBVOO2F7H with PID 5924 (J:\work\blog\target\classes started by Administrator in J:\work\blog)
+2019-04-23 23:52:48.637 [main] DEBUG com.sunql.blog.BlogApplication - Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-04-23 23:52:48.637 [main] INFO  com.sunql.blog.BlogApplication - The following profiles are active: dev
+2019-04-23 23:52:50.246 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-04-23 23:52:50.262 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-04-23 23:52:50.262 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-23 23:52:50.278 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.14] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+2019-04-23 23:52:50.278 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.14] using APR version [1.6.2].
+2019-04-23 23:52:50.278 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-04-23 23:52:50.278 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-04-23 23:52:51.356 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2l  25 May 2017]
+2019-04-23 23:52:51.481 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-04-23 23:52:51.700 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-04-23 23:52:51.903 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-04-23 23:52:52.309 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Login.
+2019-04-23 23:52:52.934 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-04-23 23:52:52.996 [main] INFO  com.sunql.blog.BlogApplication - Started BlogApplication in 4.953 seconds (JVM running for 20.696)
+2019-04-23 23:53:48.561 [main] INFO  com.sunql.blog.BlogApplication - Starting BlogApplication on M81OGMXBVOO2F7H with PID 11148 (J:\work\blog\target\classes started by Administrator in J:\work\blog)
+2019-04-23 23:53:48.576 [main] DEBUG com.sunql.blog.BlogApplication - Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-04-23 23:53:48.576 [main] INFO  com.sunql.blog.BlogApplication - The following profiles are active: dev
+2019-04-23 23:53:50.561 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-04-23 23:53:50.576 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-04-23 23:53:50.576 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-23 23:53:50.592 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.14] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+2019-04-23 23:53:50.592 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.14] using APR version [1.6.2].
+2019-04-23 23:53:50.592 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-04-23 23:53:50.592 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-04-23 23:53:51.654 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2l  25 May 2017]
+2019-04-23 23:53:51.779 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-04-23 23:53:52.014 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-04-23 23:53:52.389 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-04-23 23:53:52.764 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Login.
+2019-04-23 23:53:53.482 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-04-23 23:53:53.654 [main] INFO  com.sunql.blog.BlogApplication - Started BlogApplication in 6.406 seconds (JVM running for 22.183)

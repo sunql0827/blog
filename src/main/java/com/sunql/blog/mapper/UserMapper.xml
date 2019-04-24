@@ -4,4 +4,8 @@
     <select id="loginUser" resultType="com.sunql.blog.entity.User">
         SELECT * FROM user WHERE user_phone=#{user_phone} and user_pwd=#{user_pwd}
     </select>
+    <select id="selectPhone" resultType="com.sunql.blog.entity.User">
+        SELECT * FROM user WHERE user_phone=#{user_phone}
+    </select>
+
 </mapper>
