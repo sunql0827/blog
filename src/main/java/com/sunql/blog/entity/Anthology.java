@@ -1,10 +1,15 @@
 package com.sunql.blog.entity;
 
 import com.sunql.blog.base.BaseEntity;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 /**
  * <p>
@@ -16,6 +21,7 @@ import lombok.experimental.Accessors;
  */
 @Data
 @Builder
+@Entity
 @EqualsAndHashCode(callSuper = true)
 @Accessors(chain = true)
 public class Anthology extends BaseEntity {
@@ -38,17 +44,18 @@ public class Anthology extends BaseEntity {
         this.updataTime = updataTime;
         this.userId = userId;
     }
-
-    private Integer id;
-
+    @Id
+    @GeneratedValue
+    private Integer id=0;
+    @ApiModelProperty("添加时间")
     private Long addTime;
-
+    @ApiModelProperty("文集文章数")
     private Integer articleSize;
-
+    @ApiModelProperty("文集标题")
     private String title;
-
+    @ApiModelProperty("更新时间")
     private Long updataTime;
-
+    @ApiModelProperty("用户ID")
     private String userId;
 
 

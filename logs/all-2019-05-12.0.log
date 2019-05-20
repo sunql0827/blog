@@ -1,0 +1,706 @@
+2019-05-12 09:45:55.786 [main] INFO  com.sunql.blog.BlogApplication - Starting BlogApplication on M81OGMXBVOO2F7H with PID 10652 (J:\work\blog\target\classes started by Administrator in J:\work\blog)
+2019-05-12 09:45:55.801 [main] DEBUG com.sunql.blog.BlogApplication - Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-05-12 09:45:55.801 [main] INFO  com.sunql.blog.BlogApplication - The following profiles are active: dev
+2019-05-12 09:45:57.832 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-05-12 09:45:57.848 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-05-12 09:45:57.848 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-05-12 09:45:57.864 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.14] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+2019-05-12 09:45:57.864 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.14] using APR version [1.6.2].
+2019-05-12 09:45:57.864 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-05-12 09:45:57.864 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-05-12 09:45:58.911 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2l  25 May 2017]
+2019-05-12 09:45:59.067 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-05-12 09:45:59.348 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-05-12 09:45:59.645 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-05-12 09:46:00.067 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Banner.
+2019-05-12 09:46:00.098 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Comment.
+2019-05-12 09:46:00.161 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Login.
+2019-05-12 09:46:00.864 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-05-12 09:46:00.942 [main] INFO  com.sunql.blog.BlogApplication - Started BlogApplication in 5.797 seconds (JVM running for 9.676)
+2019-05-12 15:18:09.575 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h39m52s991ms957µs657ns).
+2019-05-12 16:28:05.327 [http-nio-8080-exec-4] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-12 16:28:05.606 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE type = ? 
+2019-05-12 16:28:05.688 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==> Parameters: 1(Integer)
+2019-05-12 16:28:05.773 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - <==      Total: 3
+2019-05-12 16:28:05.779 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==>  Preparing: SELECT title,imgurl,add_time,updata_time,uid,type,href FROM banner WHERE uid = ? 
+2019-05-12 16:28:05.780 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 16:28:05.826 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - <==      Total: 3
+2019-05-12 16:28:17.887 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE user_id = ? 
+2019-05-12 16:28:17.888 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 16:28:17.899 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - <==      Total: 11
+2019-05-12 16:28:17.900 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==>  Preparing: SELECT id,add_time,article_size,title,updata_time,user_id FROM anthology WHERE user_id = ? 
+2019-05-12 16:28:17.901 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 16:28:17.912 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - <==      Total: 5
+2019-05-12 16:28:22.960 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE type = ? 
+2019-05-12 16:28:22.961 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==> Parameters: 1(Integer)
+2019-05-12 16:28:22.970 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - <==      Total: 3
+2019-05-12 16:28:22.973 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==>  Preparing: SELECT title,imgurl,add_time,updata_time,uid,type,href FROM banner WHERE uid = ? 
+2019-05-12 16:28:22.974 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 16:28:22.979 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - <==      Total: 3
+2019-05-12 16:28:24.909 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-05-12 16:28:24.909 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 16:28:24.916 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-05-12 16:28:24.918 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE user_id = ? 
+2019-05-12 16:28:24.919 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 16:28:24.925 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - <==      Total: 11
+2019-05-12 16:28:24.928 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - ==>  Preparing: SELECT content,uid,author,art_id,add_time FROM comment WHERE uid = ? 
+2019-05-12 16:28:24.928 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 16:28:24.937 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - <==      Total: 3
+2019-05-12 18:39:05.554 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=33m23s203ms315µs41ns).
+2019-05-12 19:22:49.462 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE id=? 
+2019-05-12 19:22:49.462 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - ==> Parameters: 13(Integer)
+2019-05-12 19:22:49.467 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.ArticleMapper.selectById - <==      Total: 1
+2019-05-12 19:22:49.479 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.ArticleMapper.updateById - ==>  Preparing: UPDATE article SET add_time=?, art_desc=?, art_title=?, art_type=?, comment=?, islike=?, isread=?, is_release=?, updata_time=?, user_id=?, words=?, intro=?, type=? WHERE id=? 
+2019-05-12 19:22:49.481 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.ArticleMapper.updateById - ==> Parameters: 1549200855712(Long), <div data-note-content="" class="show-content">
+
+			<div class="show-content-free">
+				<h3>前言</h3>
+				<p>全栈工程师，一直以来都是软件行业热议的话题，只要提到全栈工程师大家就觉得很高大上，当然也有人直接说万金油而已，往好听说是全栈工程师，综合能力全，但是实际上就是什么都会哪都不精通。有人唾之以鼻，也有人称赞不已。<br> 对于许多创业公司来讲，全栈工程师也是不错的选择，花一个人钱做一个团队的事何乐而不为呢。所以全栈工程师也就成了仅次于架构师的一个职位。
+				</p>
+				<h3>全栈工程师</h3>
+				<p></p>
+				<p></p>
+				那么什么是全栈工程师呢？大家都各有说辞，有的人说精通前后端，有的人说初级架构师，那么不妨看看百度词条：
+				<p>
+					</p><div class="image-view">
+						<img src="http://www.sunql.top/images/image1.jpeg" width="100%">
+					</div>
+				<p></p>
+
+				<p>其中百度词条也说到全局思维这一点，还有根据这些年我的工作经历，个人认为全局思维才是全栈工程师最核心的一点。<br> 最近不少人说到互联网寒冬的说法，还有不少人说程序员是吃年轻饭的，最多不会超过35岁这业界黄昏点，对此引起不少人的焦虑。其实在我看来这些人云亦云引起的焦虑，其实最主要的原因就是现在企业对程序员的要求越来越高，需要的不仅仅是只会单一技能，企业不再需要只会敲代码的一个工程师。
+					<br> 职场从来都不是平静的，他只会淘汰掉不需要那群人，选出优秀的那一部分进入管理层圈子。古人就说过“近朱者赤，近墨者黑”，跟随优秀的人在一起，就会看到不一样的天空。有些圈子你没进入你就看不到那个圈子里的世界，你就理所当然地认为是寒冬来临。
+					<br> 在IT程序开发这个大环境下，大家都是程序员，如果你拥有全局思维，那么你就是下一个管理者人选，所以你到35岁还是只会代码，或则工作了5年，你依旧只会单一技能，这能怪公司吗？能说寒冬吗？这问题本身在于自己，是你自己给自己画出了寒冬这个怪圈。
+				</p>
+
+				<h5>个人经历</h5>
+				<p>接下来，我从个人经历的角度，说说全栈工程师。<br>
+				</p>
+				<p></p>
+				3年前我进入程序行业，第一时间就把自己的目标定位成了全栈工程师，所以制定了一个3~5年的计划，希望5年之内成为一名全栈工程师，于是我就开始了对全栈之路的摸索之路。
+				<p>
+					</p><div class="image-view"><img src="http://www.sunql.top/images/image2.jpg" width="100%"></div>
+				<p></p>第一年开始Android开发，当时从应用层开发，再到硬件驱动（传感器）开发，虽然如今Android开发有些日落黄昏的节奏，但是这一年带给我的收获也是蛮大的。<br>
+				<p>第二年开始了web前端开发，从H5、CSS3、ES6,再到vue.js、react.js，还有当前比较火的微信小程序，也为我打开了前端的视野。<br> 第三年开始了javaweb的学习，Servlet、Jsp、struts2，spring全家桶等，让我对开发编程有了全新的认知。由此我意识到所有开发都是以数据为导向，尤其对当前人工智能的解释，人工智能就是数据分析。
+					<br> 三年的开发经历，让我从单纯的代码搬运工，逐渐开始对项目思考，对整个项目系统架构思考，08年这一年也开始管理小团队，学会了对项目分析，从需求上审视业务功能，逐步培养自己对于项目的全局思维能力，以及开始考虑产品推广，市场反馈等问题。
+					<br> 之前有群友讨论说，后端开发才是最好晋升管理的首选，目前所有项目经理及管理层，多数都是由管理层转的，当时我就在想，为什么这样，当时我心中答案就是——全局思维。是的，这也就是全栈工程师的核心思维，这一点算是我这三年来的领悟吧。
+					<br> 后台人员相对于前端，移动端，测试，还是有产品而言的，后端人员考虑项目就是项目数据本身，数据就是这个项目的主干。如今的社会是以数据为导向的世界，对于整个软件系统，数据穿插在整个项目中，无论是前端，还是移动端，还是产品或则测试，所以无形中为后端人员培养了全局思维能力，这也是后端人员更容易转管理层的原因。简单讲，全栈工程师就是项目经理进入管理层的首选对象。
+				</p>
+
+				<h3>学习路线</h3>
+				<p></p>
+				<p></p>
+				那么怎么成为全栈工程呢？这也是许多人非常迷茫的问题，大家总认为全栈工程师很神秘，高深莫测的样子，其实并不是那样的神秘，这都是一个知识的积累过程，一步一步积累而来的，下面我们看看下面这张图吧
+				<p>
+					</p><div class="image-view"><img src="http://www.sunql.top/images/image3.jpg" width="100%"></div>
+				<p></p>
+				<p>从上图就可以清楚地看到，全栈工程师需要具备的能力大体分为三类，移动端开发，web前端开发，以及后端开发。也许对于很多人来说，也许就会不由自主地感叹：这些知识太多了吧。我曾经看到过这么一句话：“一名优秀的程序员，一年至少需要学习一门新的程序语言，以应对未来多变的软件行业。”</p>
+
+				<h4>移动端开发</h4>
+				<p>移动端开发就目前而言，需要学习模块主要为Android或者IOS。其中在国内，Android的应用越来越为广泛，智能穿戴，门禁系统，车载电视，家庭网路电视等。以Android移动开发为例需要学习的大纲为：</p>
+				<br>
+				<p>
+					</p><div class="image-view"><img src="http://www.sunql.top/images/image4.jpg" width="100%"></div>
+				<p></p>
+				<p></p>
+				详细知识大纲，如下图所示：
+				<p>
+					</p><div class="image-view"><img src="http://www.sunql.top/images/image4.jpg" width="100%"></div>
+				<p></p>目前Android，大家都说android开发越来越不景气。其实不是，只是企业不再需要初级android人员，如今android也开始倾向于硬件开发，TV电视端开发比较多。android开发选择android studio,ios开发xcode，同时也要学会一些混合开发知识，比如weex,react native,cordova等。
+				<h4>web前端开发</h4>
+				<p></p>
+				<p></p>
+				一般前端开发，多指web前端开发，主要为网页开发，现在同是包含微信小程序开发，前端开发学习大纲分为pc端和移动端，大体学习大纲为：
+				<p>
+					</p><div class="image-view"><img src="http://www.sunql.top/images/image2.jpg" width="100%"></div>
+				<p></p>
+				<p>前端开发目前比较常用开发工具为Hbuilder,vs code,Web Storm等，并且还需要熟悉npm，yarn ,webpack等。</p>
+
+				<h4>后端开发</h4>
+				<p>后端开发目前常用为java,c++,c，python,php等，我这里就列举java后端学习大概方向：</p>
+				<p>
+					</p><div class="image-view"><img src="http://www.sunql.top/images/image1.jpeg" width="100%"></div>
+				<p></p><br> 后端开发而后也分为大数据方向，分布式系统架构方向等，服务器方面后端也要学会常用linux命令，熟悉常用的web应用服务器，如tomcat,Apache ,nginx等，比如C语言，c++相关开发选择vs,java开发选择idea，es等，详细请查看java团长的博客
+				<a href="http://www.cnblogs.com/java1024/p/8583274.html" target="_blank" rel="nofollow">http://www.cnblogs.com/java1024/p/8583274.html</a>，他的体系介绍比较完整。<br> 而后还需要学习其他方面的辅助知识，git,svn等代码版本管理工具。
+				<p></p>
+				<h4>总结</h4>
+				<p>全栈工程师的核心能力就是全局思维，能够独自一人把控整个项目，不像常规单一职责的工程师一样不同的人有不同的看法持一孔之见。因为拥有全局统筹能力，所以全栈工程在未来会更加受到欢迎，同时全栈工程师之路所要学习的东西往往会比单一开发者要多得多，不过付出总会有收获的。如果决定成为一名全栈工程师，就不要在意别人的说辞，坚持走下去，走下去无论最后那份答卷会怎么样，最终的结果都不会令你失望。<br>
+				</p>
+				<p></p>
+				如果说全栈工程师被称作万金油，被认为会很多却不精通，从而被认为油，那么就让把“油”字去掉，成为“万金”工程师，当然也可以不去掉，至于原因火影迷应该都知道“油”。
+				<p>
+					</p><div class="image-view"><img src="http://www.sunql.top/images/image2.jpg" width="100%"></div>
+				<p></p>以上纯属个人见解，如有异议，还望指正。<br>
+				<p>最后奉上一句：</p>
+
+				<h5>未来职场是留给会写作的人，不会写作的人，正在失去你的职场核心竞争力。</h5>
+
+			</div>
+		</div>(String), 我眼中的全栈工程师(String), 3(Integer), 1(Integer), 2(Integer), 16(Integer), 0(Integer), 1550413915384(Long), MnF/9XPJEprPvk/EwSLBAg==(String), 4417(Integer), 全栈工程师，一直以来都是软件行业热议的话(String), 1(Integer), 13(Integer)
+2019-05-12 19:22:49.495 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.ArticleMapper.updateById - <==    Updates: 1
+2019-05-12 19:22:49.497 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-05-12 19:22:49.498 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 19:22:49.501 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-05-12 19:22:49.504 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - ==>  Preparing: SELECT content,uid,author,art_id,add_time FROM comment WHERE art_id = ? 
+2019-05-12 19:22:49.504 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - ==> Parameters: 13(Integer)
+2019-05-12 19:22:49.509 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - <==      Total: 3
+2019-05-12 19:23:41.996 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE type = ? 
+2019-05-12 19:23:41.997 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==> Parameters: 1(Integer)
+2019-05-12 19:23:42.004 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - <==      Total: 3
+2019-05-12 19:23:42.007 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==>  Preparing: SELECT title,imgurl,add_time,updata_time,uid,type,href FROM banner WHERE uid = ? 
+2019-05-12 19:23:42.007 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 19:23:42.010 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - <==      Total: 3
+2019-05-12 20:11:13.883 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-05-12 20:11:13.885 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:11:13.888 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-05-12 20:11:13.891 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE user_id = ? 
+2019-05-12 20:11:13.892 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:11:13.900 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - <==      Total: 11
+2019-05-12 20:11:13.903 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - ==>  Preparing: SELECT content,uid,author,art_id,add_time FROM comment WHERE uid = ? 
+2019-05-12 20:11:13.904 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:11:13.910 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - <==      Total: 3
+2019-05-12 20:13:16.519 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-05-12 20:13:16.520 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:13:16.521 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-05-12 20:13:16.524 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE user_id = ? 
+2019-05-12 20:13:16.524 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:13:16.529 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - <==      Total: 11
+2019-05-12 20:13:16.531 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - ==>  Preparing: SELECT content,uid,author,art_id,add_time FROM comment WHERE uid = ? 
+2019-05-12 20:13:16.531 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:13:16.533 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - <==      Total: 3
+2019-05-12 20:22:12.754 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-05-12 20:22:12.754 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:22:12.757 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-05-12 20:22:12.758 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE user_id = ? 
+2019-05-12 20:22:12.759 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:22:12.761 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - <==      Total: 11
+2019-05-12 20:22:12.763 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - ==>  Preparing: SELECT content,uid,author,art_id,add_time FROM comment WHERE uid = ? 
+2019-05-12 20:22:12.763 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:22:12.764 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - <==      Total: 3
+2019-05-12 20:23:07.557 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-05-12 20:23:07.557 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:23:07.559 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-05-12 20:23:07.561 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE user_id = ? 
+2019-05-12 20:23:07.561 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:23:07.564 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - <==      Total: 11
+2019-05-12 20:23:07.566 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - ==>  Preparing: SELECT content,uid,author,art_id,add_time FROM comment WHERE uid = ? 
+2019-05-12 20:23:07.566 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:23:07.569 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - <==      Total: 3
+2019-05-12 20:25:22.972 [main] INFO  com.sunql.blog.BlogApplication - Starting BlogApplication on M81OGMXBVOO2F7H with PID 8648 (J:\work\blog\target\classes started by Administrator in J:\work\blog)
+2019-05-12 20:25:22.982 [main] DEBUG com.sunql.blog.BlogApplication - Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-05-12 20:25:22.982 [main] INFO  com.sunql.blog.BlogApplication - The following profiles are active: dev
+2019-05-12 20:25:25.125 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-05-12 20:25:25.140 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-05-12 20:25:25.140 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-05-12 20:25:25.148 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.14] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+2019-05-12 20:25:25.149 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.14] using APR version [1.6.2].
+2019-05-12 20:25:25.149 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-05-12 20:25:25.149 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-05-12 20:25:26.198 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2l  25 May 2017]
+2019-05-12 20:25:26.341 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-05-12 20:25:26.641 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-05-12 20:25:26.967 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-05-12 20:25:27.378 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Banner.
+2019-05-12 20:25:27.417 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Comment.
+2019-05-12 20:25:27.495 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Login.
+2019-05-12 20:25:28.210 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-05-12 20:25:28.301 [main] INFO  com.sunql.blog.BlogApplication - Started BlogApplication in 6.354 seconds (JVM running for 17.553)
+2019-05-12 20:26:05.441 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-12 20:26:05.743 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE type = ? 
+2019-05-12 20:26:05.781 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==> Parameters: 1(Integer)
+2019-05-12 20:26:05.923 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - <==      Total: 3
+2019-05-12 20:26:05.929 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==>  Preparing: SELECT title,imgurl,add_time,updata_time,uid,type,href FROM banner WHERE uid = ? 
+2019-05-12 20:26:05.930 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:26:05.937 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - <==      Total: 3
+2019-05-12 20:28:20.138 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE type = ? 
+2019-05-12 20:28:20.139 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==> Parameters: 1(Integer)
+2019-05-12 20:28:20.145 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - <==      Total: 3
+2019-05-12 20:28:20.148 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==>  Preparing: SELECT title,imgurl,add_time,updata_time,uid,type,href FROM banner WHERE uid = ? 
+2019-05-12 20:28:20.149 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:28:20.153 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - <==      Total: 3
+2019-05-12 20:29:12.101 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-05-12 20:29:12.101 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:29:12.108 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-05-12 20:29:12.111 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE user_id = ? 
+2019-05-12 20:29:12.112 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:29:12.123 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - <==      Total: 11
+2019-05-12 20:29:12.128 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - ==>  Preparing: SELECT content,uid,author,art_id,add_time FROM comment WHERE uid = ? 
+2019-05-12 20:29:12.128 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:29:12.135 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - <==      Total: 3
+2019-05-12 20:29:17.088 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE type = ? 
+2019-05-12 20:29:17.089 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==> Parameters: 1(Integer)
+2019-05-12 20:29:17.095 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - <==      Total: 3
+2019-05-12 20:29:17.098 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==>  Preparing: SELECT title,imgurl,add_time,updata_time,uid,type,href FROM banner WHERE uid = ? 
+2019-05-12 20:29:17.098 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:29:17.101 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - <==      Total: 3
+2019-05-12 20:30:06.654 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE type = ? 
+2019-05-12 20:30:06.654 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==> Parameters: 1(Integer)
+2019-05-12 20:30:06.660 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - <==      Total: 3
+2019-05-12 20:30:06.662 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==>  Preparing: SELECT title,imgurl,add_time,updata_time,uid,type,href FROM banner WHERE uid = ? 
+2019-05-12 20:30:06.662 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:30:06.665 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - <==      Total: 3
+2019-05-12 20:31:27.881 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE type = ? 
+2019-05-12 20:31:27.881 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==> Parameters: 1(Integer)
+2019-05-12 20:31:27.881 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - <==      Total: 3
+2019-05-12 20:31:27.881 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==>  Preparing: SELECT title,imgurl,add_time,updata_time,uid,type,href FROM banner WHERE uid = ? 
+2019-05-12 20:31:27.881 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:31:27.897 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - <==      Total: 3
+2019-05-12 20:31:35.467 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-05-12 20:31:35.468 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:31:35.471 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-05-12 20:31:35.473 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE user_id = ? 
+2019-05-12 20:31:35.473 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:31:35.480 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - <==      Total: 11
+2019-05-12 20:31:35.484 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - ==>  Preparing: SELECT content,uid,author,art_id,add_time FROM comment WHERE uid = ? 
+2019-05-12 20:31:35.485 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:31:35.491 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - <==      Total: 3
+2019-05-12 20:32:06.025 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-05-12 20:32:06.026 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:32:06.028 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-05-12 20:32:06.030 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE user_id = ? 
+2019-05-12 20:32:06.031 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:32:06.038 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - <==      Total: 11
+2019-05-12 20:32:06.042 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - ==>  Preparing: SELECT content,uid,author,art_id,add_time FROM comment WHERE uid = ? 
+2019-05-12 20:32:06.042 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:32:06.045 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - <==      Total: 3
+2019-05-12 20:34:33.381 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-05-12 20:34:33.381 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:34:33.381 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-05-12 20:34:33.381 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE user_id = ? 
+2019-05-12 20:34:33.381 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:34:33.381 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - <==      Total: 11
+2019-05-12 20:34:33.381 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - ==>  Preparing: SELECT content,uid,author,art_id,add_time FROM comment WHERE uid = ? 
+2019-05-12 20:34:33.381 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:34:33.381 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - <==      Total: 3
+2019-05-12 20:35:25.397 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-05-12 20:35:25.399 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:35:25.402 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-05-12 20:35:25.404 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE user_id = ? 
+2019-05-12 20:35:25.405 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:35:25.412 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - <==      Total: 11
+2019-05-12 20:35:25.414 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - ==>  Preparing: SELECT content,uid,author,art_id,add_time FROM comment WHERE uid = ? 
+2019-05-12 20:35:25.415 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:35:25.417 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - <==      Total: 3
+2019-05-12 20:39:01.431 [main] INFO  com.sunql.blog.BlogApplication - Starting BlogApplication on M81OGMXBVOO2F7H with PID 9188 (J:\work\blog\target\classes started by Administrator in J:\work\blog)
+2019-05-12 20:39:01.438 [main] DEBUG com.sunql.blog.BlogApplication - Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-05-12 20:39:01.438 [main] INFO  com.sunql.blog.BlogApplication - The following profiles are active: dev
+2019-05-12 20:39:03.029 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-05-12 20:39:03.039 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-05-12 20:39:03.039 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-05-12 20:39:03.047 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.14] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+2019-05-12 20:39:03.048 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.14] using APR version [1.6.2].
+2019-05-12 20:39:03.048 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-05-12 20:39:03.048 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-05-12 20:39:04.097 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2l  25 May 2017]
+2019-05-12 20:39:04.214 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-05-12 20:39:04.423 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-05-12 20:39:04.657 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-05-12 20:39:04.992 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Banner.
+2019-05-12 20:39:05.021 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Comment.
+2019-05-12 20:39:05.092 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Login.
+2019-05-12 20:39:05.729 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-05-12 20:39:05.792 [main] INFO  com.sunql.blog.BlogApplication - Started BlogApplication in 5.006 seconds (JVM running for 15.717)
+2019-05-12 20:39:42.500 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-12 20:39:42.688 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-05-12 20:39:42.717 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:39:42.743 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-05-12 20:39:42.746 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE user_id = ? 
+2019-05-12 20:39:42.747 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:39:42.759 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - <==      Total: 11
+2019-05-12 20:39:42.761 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - ==>  Preparing: SELECT content,uid,author,art_id,add_time FROM comment WHERE uid = ? 
+2019-05-12 20:39:42.761 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:39:42.765 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - <==      Total: 3
+2019-05-12 20:40:11.498 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-05-12 20:40:11.499 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:40:11.502 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-05-12 20:40:11.504 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE user_id = ? 
+2019-05-12 20:40:11.504 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:40:11.519 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - <==      Total: 11
+2019-05-12 20:40:11.521 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - ==>  Preparing: SELECT content,uid,author,art_id,add_time FROM comment WHERE uid = ? 
+2019-05-12 20:40:11.522 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:40:11.524 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - <==      Total: 3
+2019-05-12 20:40:37.791 [http-nio-8080-exec-7] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String[] parameter 'imgs' is not present]
+2019-05-12 20:42:55.331 [main] INFO  com.sunql.blog.BlogApplication - Starting BlogApplication on M81OGMXBVOO2F7H with PID 19216 (J:\work\blog\target\classes started by Administrator in J:\work\blog)
+2019-05-12 20:42:55.360 [main] DEBUG com.sunql.blog.BlogApplication - Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-05-12 20:42:55.360 [main] INFO  com.sunql.blog.BlogApplication - The following profiles are active: dev
+2019-05-12 20:42:57.425 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-05-12 20:42:57.436 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-05-12 20:42:57.437 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-05-12 20:42:57.445 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.14] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+2019-05-12 20:42:57.446 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.14] using APR version [1.6.2].
+2019-05-12 20:42:57.446 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-05-12 20:42:57.447 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-05-12 20:42:58.499 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2l  25 May 2017]
+2019-05-12 20:42:58.633 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-05-12 20:42:58.851 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-05-12 20:42:59.082 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-05-12 20:42:59.447 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Banner.
+2019-05-12 20:42:59.483 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Comment.
+2019-05-12 20:42:59.582 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Login.
+2019-05-12 20:43:00.599 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-05-12 20:43:00.733 [main] INFO  com.sunql.blog.BlogApplication - Started BlogApplication in 6.079 seconds (JVM running for 17.151)
+2019-05-12 20:43:15.872 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-12 20:43:15.978 [http-nio-8080-exec-1] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required Object parameter 'imgs' is not present]
+2019-05-12 20:44:42.265 [main] INFO  com.sunql.blog.BlogApplication - Starting BlogApplication on M81OGMXBVOO2F7H with PID 5520 (J:\work\blog\target\classes started by Administrator in J:\work\blog)
+2019-05-12 20:44:42.268 [main] DEBUG com.sunql.blog.BlogApplication - Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-05-12 20:44:42.269 [main] INFO  com.sunql.blog.BlogApplication - The following profiles are active: dev
+2019-05-12 20:44:43.998 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-05-12 20:44:44.010 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-05-12 20:44:44.011 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-05-12 20:44:44.019 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.14] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+2019-05-12 20:44:44.019 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.14] using APR version [1.6.2].
+2019-05-12 20:44:44.019 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-05-12 20:44:44.020 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-05-12 20:44:45.062 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2l  25 May 2017]
+2019-05-12 20:44:45.188 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-05-12 20:44:45.425 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-05-12 20:44:45.653 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-05-12 20:44:46.092 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Banner.
+2019-05-12 20:44:46.121 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Comment.
+2019-05-12 20:44:46.321 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Login.
+2019-05-12 20:44:46.981 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-05-12 20:44:47.063 [main] INFO  com.sunql.blog.BlogApplication - Started BlogApplication in 5.354 seconds (JVM running for 17.176)
+2019-05-12 20:45:09.963 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-12 20:45:10.059 [http-nio-8080-exec-2] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required Object parameter 'imgs' is not present]
+2019-05-12 20:45:18.703 [http-nio-8080-exec-1] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required Object parameter 'imgs' is not present]
+2019-05-12 20:45:39.604 [http-nio-8080-exec-3] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required Object parameter 'imgs' is not present]
+2019-05-12 20:46:15.236 [http-nio-8080-exec-4] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required Object parameter 'imgs' is not present]
+2019-05-12 20:46:45.250 [main] INFO  com.sunql.blog.BlogApplication - Starting BlogApplication on M81OGMXBVOO2F7H with PID 13944 (J:\work\blog\target\classes started by Administrator in J:\work\blog)
+2019-05-12 20:46:45.254 [main] DEBUG com.sunql.blog.BlogApplication - Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-05-12 20:46:45.254 [main] INFO  com.sunql.blog.BlogApplication - The following profiles are active: dev
+2019-05-12 20:46:46.885 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-05-12 20:46:46.899 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-05-12 20:46:46.900 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-05-12 20:46:46.907 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.14] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+2019-05-12 20:46:46.908 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.14] using APR version [1.6.2].
+2019-05-12 20:46:46.908 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-05-12 20:46:46.908 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-05-12 20:46:47.938 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2l  25 May 2017]
+2019-05-12 20:46:48.056 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-05-12 20:46:48.264 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-05-12 20:46:48.490 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-05-12 20:46:48.829 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Banner.
+2019-05-12 20:46:48.859 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Comment.
+2019-05-12 20:46:48.954 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Login.
+2019-05-12 20:46:49.636 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-05-12 20:46:49.712 [main] INFO  com.sunql.blog.BlogApplication - Started BlogApplication in 5.029 seconds (JVM running for 15.821)
+2019-05-12 20:46:57.722 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-12 20:46:57.812 [http-nio-8080-exec-1] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String[] parameter 'imgs' is not present]
+2019-05-12 20:48:31.892 [main] INFO  com.sunql.blog.BlogApplication - Starting BlogApplication on M81OGMXBVOO2F7H with PID 17056 (J:\work\blog\target\classes started by Administrator in J:\work\blog)
+2019-05-12 20:48:31.896 [main] DEBUG com.sunql.blog.BlogApplication - Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-05-12 20:48:31.897 [main] INFO  com.sunql.blog.BlogApplication - The following profiles are active: dev
+2019-05-12 20:48:34.088 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-05-12 20:48:34.103 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-05-12 20:48:34.103 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-05-12 20:48:34.111 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.14] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+2019-05-12 20:48:34.111 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.14] using APR version [1.6.2].
+2019-05-12 20:48:34.112 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-05-12 20:48:34.112 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-05-12 20:48:35.167 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2l  25 May 2017]
+2019-05-12 20:48:35.345 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-05-12 20:48:35.683 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-05-12 20:48:35.953 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-05-12 20:48:36.380 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Banner.
+2019-05-12 20:48:36.414 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Comment.
+2019-05-12 20:48:36.520 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Login.
+2019-05-12 20:48:37.202 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-05-12 20:48:37.290 [main] INFO  com.sunql.blog.BlogApplication - Started BlogApplication in 6.01 seconds (JVM running for 17.446)
+2019-05-12 20:48:42.036 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-12 20:48:42.157 [http-nio-8080-exec-1] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String[] parameter 'imgs[]' is not present]
+2019-05-12 20:52:30.511 [main] INFO  com.sunql.blog.BlogApplication - Starting BlogApplication on M81OGMXBVOO2F7H with PID 15660 (J:\work\blog\target\classes started by Administrator in J:\work\blog)
+2019-05-12 20:52:30.515 [main] DEBUG com.sunql.blog.BlogApplication - Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-05-12 20:52:30.515 [main] INFO  com.sunql.blog.BlogApplication - The following profiles are active: dev
+2019-05-12 20:52:32.242 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-05-12 20:52:32.252 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-05-12 20:52:32.252 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-05-12 20:52:32.261 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.14] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+2019-05-12 20:52:32.261 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.14] using APR version [1.6.2].
+2019-05-12 20:52:32.262 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-05-12 20:52:32.262 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-05-12 20:52:33.301 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2l  25 May 2017]
+2019-05-12 20:52:33.419 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-05-12 20:52:33.651 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-05-12 20:52:33.867 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-05-12 20:52:34.221 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Banner.
+2019-05-12 20:52:34.248 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Comment.
+2019-05-12 20:52:34.336 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Login.
+2019-05-12 20:52:35.106 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-05-12 20:52:35.176 [main] INFO  com.sunql.blog.BlogApplication - Started BlogApplication in 5.296 seconds (JVM running for 16.066)
+2019-05-12 20:52:47.307 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-12 20:53:18.219 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-05-12 20:53:18.246 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:53:18.277 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-05-12 20:53:18.280 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==>  Preparing: SELECT title,imgurl,add_time,updata_time,uid,type,href FROM banner WHERE uid = ? 
+2019-05-12 20:53:18.280 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:53:18.284 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - <==      Total: 3
+2019-05-12 20:53:21.443 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==>  Preparing: SELECT title,imgurl,add_time,updata_time,uid,type,href FROM banner WHERE uid = ? 
+2019-05-12 20:53:21.443 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:53:21.447 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - <==      Total: 3
+2019-05-12 20:53:46.520 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-05-12 20:53:46.522 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:53:46.526 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-05-12 20:53:46.528 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==>  Preparing: SELECT title,imgurl,add_time,updata_time,uid,type,href FROM banner WHERE uid = ? 
+2019-05-12 20:53:46.529 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:53:46.534 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - <==      Total: 3
+2019-05-12 20:53:46.538 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==>  Preparing: SELECT title,imgurl,add_time,updata_time,uid,type,href FROM banner WHERE uid = ? 
+2019-05-12 20:53:46.539 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:53:46.544 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - <==      Total: 3
+2019-05-12 20:57:07.676 [main] INFO  com.sunql.blog.BlogApplication - Starting BlogApplication on M81OGMXBVOO2F7H with PID 17656 (J:\work\blog\target\classes started by Administrator in J:\work\blog)
+2019-05-12 20:57:07.690 [main] DEBUG com.sunql.blog.BlogApplication - Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-05-12 20:57:07.691 [main] INFO  com.sunql.blog.BlogApplication - The following profiles are active: dev
+2019-05-12 20:57:09.763 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-05-12 20:57:09.774 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-05-12 20:57:09.775 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-05-12 20:57:09.783 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.14] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+2019-05-12 20:57:09.784 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.14] using APR version [1.6.2].
+2019-05-12 20:57:09.784 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-05-12 20:57:09.784 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-05-12 20:57:10.818 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2l  25 May 2017]
+2019-05-12 20:57:10.952 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-05-12 20:57:11.203 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-05-12 20:57:11.512 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-05-12 20:57:11.955 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Banner.
+2019-05-12 20:57:12.000 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Comment.
+2019-05-12 20:57:12.088 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Login.
+2019-05-12 20:57:12.919 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-05-12 20:57:13.021 [main] INFO  com.sunql.blog.BlogApplication - Started BlogApplication in 6.465 seconds (JVM running for 17.627)
+2019-05-12 20:57:37.159 [main] INFO  com.sunql.blog.BlogApplication - Starting BlogApplication on M81OGMXBVOO2F7H with PID 17604 (J:\work\blog\target\classes started by Administrator in J:\work\blog)
+2019-05-12 20:57:37.167 [main] DEBUG com.sunql.blog.BlogApplication - Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-05-12 20:57:37.167 [main] INFO  com.sunql.blog.BlogApplication - The following profiles are active: dev
+2019-05-12 20:57:39.382 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-05-12 20:57:39.392 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-05-12 20:57:39.392 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-05-12 20:57:39.402 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.14] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+2019-05-12 20:57:39.403 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.14] using APR version [1.6.2].
+2019-05-12 20:57:39.403 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-05-12 20:57:39.403 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-05-12 20:57:40.451 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2l  25 May 2017]
+2019-05-12 20:57:40.592 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-05-12 20:57:40.807 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-05-12 20:57:41.027 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-05-12 20:57:41.377 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Banner.
+2019-05-12 20:57:41.407 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Comment.
+2019-05-12 20:57:41.475 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Login.
+2019-05-12 20:57:42.118 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-05-12 20:57:42.157 [main] INFO  com.sunql.blog.BlogApplication - Started BlogApplication in 5.669 seconds (JVM running for 7.467)
+2019-05-12 20:58:18.666 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-12 20:58:18.940 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-05-12 20:58:18.980 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:58:19.058 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-05-12 20:58:19.063 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE user_id = ? 
+2019-05-12 20:58:19.064 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:58:19.082 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - <==      Total: 11
+2019-05-12 20:58:19.084 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - ==>  Preparing: SELECT content,uid,author,art_id,add_time FROM comment WHERE uid = ? 
+2019-05-12 20:58:19.085 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:58:19.093 [http-nio-8080-exec-1] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - <==      Total: 3
+2019-05-12 20:58:31.361 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-05-12 20:58:31.361 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:58:31.364 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-05-12 20:58:31.365 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE user_id = ? 
+2019-05-12 20:58:31.365 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:58:31.374 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - <==      Total: 11
+2019-05-12 20:58:31.375 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - ==>  Preparing: SELECT content,uid,author,art_id,add_time FROM comment WHERE uid = ? 
+2019-05-12 20:58:31.376 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:58:31.378 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - <==      Total: 3
+2019-05-12 20:59:01.376 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-05-12 20:59:01.377 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:59:01.378 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-05-12 20:59:01.380 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE user_id = ? 
+2019-05-12 20:59:01.380 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:59:01.385 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - <==      Total: 11
+2019-05-12 20:59:01.387 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - ==>  Preparing: SELECT content,uid,author,art_id,add_time FROM comment WHERE uid = ? 
+2019-05-12 20:59:01.387 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:59:01.389 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.CommentMapper.selectList - <==      Total: 3
+2019-05-12 20:59:26.147 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE uid = ? 
+2019-05-12 20:59:26.148 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:59:26.151 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.UserMapper.selectOne - <==      Total: 1
+2019-05-12 20:59:26.154 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==>  Preparing: SELECT title,imgurl,add_time,updata_time,uid,type,href FROM banner WHERE uid = ? 
+2019-05-12 20:59:26.155 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:59:26.161 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - <==      Total: 3
+2019-05-12 20:59:26.168 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.BannerMapper.insert - ==>  Preparing: INSERT INTO banner ( title, imgurl, add_time, updata_time, uid, type, href ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+2019-05-12 20:59:26.170 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.BannerMapper.insert - ==> Parameters: 1557665966163(String), http://169.254.231.96:8080/images/upload/1557665950470.jpg(String), 1557665966163(Long), 1557665966163(Long), MnF/9XPJEprPvk/EwSLBAg==(String), 1(Integer), http://www.baidu.com(String)
+2019-05-12 20:59:26.196 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.BannerMapper.insert - <==    Updates: 1
+2019-05-12 20:59:26.197 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.BannerMapper.insert - ==>  Preparing: INSERT INTO banner ( title, imgurl, add_time, updata_time, uid, type, href ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+2019-05-12 20:59:26.199 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.BannerMapper.insert - ==> Parameters: 1557665966163(String), http://169.254.231.96:8080/images/upload/1557665956792.jpg(String), 1557665966163(Long), 1557665966163(Long), MnF/9XPJEprPvk/EwSLBAg==(String), 1(Integer), http://www.baidu.com(String)
+2019-05-12 20:59:26.207 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.BannerMapper.insert - <==    Updates: 1
+2019-05-12 20:59:26.208 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==>  Preparing: SELECT title,imgurl,add_time,updata_time,uid,type,href FROM banner WHERE uid = ? 
+2019-05-12 20:59:26.208 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:59:26.214 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - <==      Total: 5
+2019-05-12 20:59:39.229 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE type = ? 
+2019-05-12 20:59:39.230 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==> Parameters: 1(Integer)
+2019-05-12 20:59:39.238 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - <==      Total: 3
+2019-05-12 20:59:39.241 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==>  Preparing: SELECT title,imgurl,add_time,updata_time,uid,type,href FROM banner WHERE uid = ? 
+2019-05-12 20:59:39.242 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:59:39.245 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - <==      Total: 5
+2019-05-12 20:59:43.610 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE type = ? 
+2019-05-12 20:59:43.610 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==> Parameters: 1(Integer)
+2019-05-12 20:59:43.614 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - <==      Total: 3
+2019-05-12 20:59:43.618 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==>  Preparing: SELECT title,imgurl,add_time,updata_time,uid,type,href FROM banner WHERE uid = ? 
+2019-05-12 20:59:43.618 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 20:59:43.624 [http-nio-8080-exec-10] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - <==      Total: 5
+2019-05-12 21:00:08.938 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE type = ? 
+2019-05-12 21:00:08.939 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==> Parameters: 1(Integer)
+2019-05-12 21:00:08.943 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - <==      Total: 3
+2019-05-12 21:00:08.945 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==>  Preparing: SELECT title,imgurl,add_time,updata_time,uid,type,href FROM banner WHERE uid = ? 
+2019-05-12 21:00:08.946 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 21:00:08.949 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - <==      Total: 5
+2019-05-12 21:02:17.039 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE type = ? 
+2019-05-12 21:02:17.040 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==> Parameters: 1(Integer)
+2019-05-12 21:02:17.044 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - <==      Total: 3
+2019-05-12 21:02:21.196 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==>  Preparing: SELECT title,imgurl,add_time,updata_time,uid,type,href FROM banner WHERE uid = ? 
+2019-05-12 21:02:21.197 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 21:02:21.199 [http-nio-8080-exec-9] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - <==      Total: 5
+2019-05-12 21:04:37.224 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE type = ? 
+2019-05-12 21:04:37.225 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==> Parameters: 1(Integer)
+2019-05-12 21:04:37.229 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - <==      Total: 3
+2019-05-12 21:04:43.127 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==>  Preparing: SELECT title,imgurl,add_time,updata_time,uid,type,href FROM banner WHERE uid = ? 
+2019-05-12 21:04:43.128 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 21:04:43.130 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - <==      Total: 2
+2019-05-12 21:04:50.517 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE type = ? 
+2019-05-12 21:04:50.517 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==> Parameters: 1(Integer)
+2019-05-12 21:04:50.521 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - <==      Total: 3
+2019-05-12 21:04:50.522 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==>  Preparing: SELECT title,imgurl,add_time,updata_time,uid,type,href FROM banner WHERE uid = ? 
+2019-05-12 21:04:50.523 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 21:04:50.525 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - <==      Total: 2
+2019-05-12 21:07:56.372 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE user_id = ? 
+2019-05-12 21:07:56.373 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 21:07:56.380 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - <==      Total: 11
+2019-05-12 21:07:56.382 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==>  Preparing: SELECT id,add_time,article_size,title,updata_time,user_id FROM anthology WHERE user_id = ? 
+2019-05-12 21:07:56.382 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 21:07:56.396 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - <==      Total: 5
+2019-05-12 21:08:46.064 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE user_id = ? 
+2019-05-12 21:08:46.065 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 21:08:46.069 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - <==      Total: 11
+2019-05-12 21:08:46.069 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==>  Preparing: SELECT id,add_time,article_size,title,updata_time,user_id FROM anthology WHERE user_id = ? 
+2019-05-12 21:08:46.070 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 21:08:46.073 [http-nio-8080-exec-4] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - <==      Total: 5
+2019-05-12 21:09:34.529 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE user_id = ? 
+2019-05-12 21:09:34.530 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 21:09:34.535 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - <==      Total: 11
+2019-05-12 21:09:34.536 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==>  Preparing: SELECT id,add_time,article_size,title,updata_time,user_id FROM anthology WHERE user_id = ? 
+2019-05-12 21:09:34.537 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 21:09:34.539 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - <==      Total: 5
+2019-05-12 21:09:58.825 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE type = ? 
+2019-05-12 21:09:58.826 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==> Parameters: 1(Integer)
+2019-05-12 21:09:58.829 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - <==      Total: 3
+2019-05-12 21:09:58.831 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==>  Preparing: SELECT title,imgurl,add_time,updata_time,uid,type,href FROM banner WHERE uid = ? 
+2019-05-12 21:09:58.832 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 21:09:58.834 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - <==      Total: 2
+2019-05-12 21:10:00.611 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE user_id = ? 
+2019-05-12 21:10:00.612 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 21:10:00.618 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - <==      Total: 11
+2019-05-12 21:10:00.619 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==>  Preparing: SELECT id,add_time,article_size,title,updata_time,user_id FROM anthology WHERE user_id = ? 
+2019-05-12 21:10:00.620 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 21:10:00.626 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - <==      Total: 5
+2019-05-12 21:10:02.604 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE type = ? 
+2019-05-12 21:10:02.605 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==> Parameters: 1(Integer)
+2019-05-12 21:10:02.608 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - <==      Total: 3
+2019-05-12 21:10:02.610 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==>  Preparing: SELECT title,imgurl,add_time,updata_time,uid,type,href FROM banner WHERE uid = ? 
+2019-05-12 21:10:02.611 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 21:10:02.613 [http-nio-8080-exec-7] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - <==      Total: 2
+2019-05-12 21:10:52.410 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.UserMapper.selectPhone - ==>  Preparing: SELECT * FROM user WHERE user_phone=? 
+2019-05-12 21:10:52.411 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.UserMapper.selectPhone - ==> Parameters: 17308354855(Long)
+2019-05-12 21:10:52.413 [http-nio-8080-exec-8] DEBUG com.sunql.blog.mapper.UserMapper.selectPhone - <==      Total: 1
+2019-05-12 21:21:32.114 [main] INFO  com.sunql.blog.BlogApplication - Starting BlogApplication on M81OGMXBVOO2F7H with PID 14392 (J:\work\blog\target\classes started by Administrator in J:\work\blog)
+2019-05-12 21:21:32.117 [main] DEBUG com.sunql.blog.BlogApplication - Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-05-12 21:21:32.118 [main] INFO  com.sunql.blog.BlogApplication - The following profiles are active: dev
+2019-05-12 21:21:33.744 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-05-12 21:21:33.753 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2019-05-12 21:21:33.753 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-05-12 21:21:33.761 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.2.14] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+2019-05-12 21:21:33.761 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.14] using APR version [1.6.2].
+2019-05-12 21:21:33.762 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-05-12 21:21:33.762 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-05-12 21:21:34.819 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2l  25 May 2017]
+2019-05-12 21:21:34.938 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-05-12 21:21:35.180 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-05-12 21:21:35.443 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-05-12 21:21:35.774 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Banner.
+2019-05-12 21:21:35.808 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Comment.
+2019-05-12 21:21:35.879 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Login.
+2019-05-12 21:21:36.509 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-05-12 21:21:36.579 [main] INFO  com.sunql.blog.BlogApplication - Started BlogApplication in 5.021 seconds (JVM running for 15.655)
+2019-05-12 21:31:32.233 [http-nio-8080-exec-2] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-05-12 21:31:32.350 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.UserMapper.loginUser - ==>  Preparing: SELECT * FROM user WHERE user_phone=? and user_pwd=? 
+2019-05-12 21:31:32.379 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.UserMapper.loginUser - ==> Parameters: 18716643045(String), 12345678(String)
+2019-05-12 21:31:32.421 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.UserMapper.loginUser - <==      Total: 1
+2019-05-12 21:31:32.450 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.LoginMapper.insert - ==>  Preparing: INSERT INTO login ( ipaddress, loginstate, logintime, uid, token ) VALUES ( ?, ?, ?, ?, ? ) 
+2019-05-12 21:31:32.451 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.LoginMapper.insert - ==> Parameters: 192.168.1.1(String), 1(Integer), 1557667892423(String), MnF/9XPJEprPvk/EwSLBAg==(String), y9DzarRrRD15D4r0r5Ujsg==(String)
+2019-05-12 21:31:32.458 [http-nio-8080-exec-2] DEBUG com.sunql.blog.mapper.LoginMapper.insert - <==    Updates: 1
+2019-05-12 21:31:34.703 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE type = ? 
+2019-05-12 21:31:34.704 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==> Parameters: 1(Integer)
+2019-05-12 21:31:34.711 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - <==      Total: 3
+2019-05-12 21:31:34.714 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==>  Preparing: SELECT title,imgurl,add_time,updata_time,uid,type,href FROM banner WHERE uid = ? 
+2019-05-12 21:31:34.714 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 21:31:34.717 [http-nio-8080-exec-3] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - <==      Total: 2
+2019-05-12 21:31:42.874 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE user_id = ? 
+2019-05-12 21:31:42.875 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 21:31:42.885 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.ArticleMapper.selectByMap - <==      Total: 11
+2019-05-12 21:31:42.886 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==>  Preparing: SELECT id,add_time,article_size,title,updata_time,user_id FROM anthology WHERE user_id = ? 
+2019-05-12 21:31:42.887 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 21:31:42.892 [http-nio-8080-exec-5] DEBUG com.sunql.blog.mapper.AnthologyMapper.selectByMap - <==      Total: 5
+2019-05-12 21:31:52.472 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==>  Preparing: SELECT id,add_time,art_desc,art_title,art_type,comment,islike,isread,is_release,updata_time,user_id,words,intro,type FROM article WHERE type = ? 
+2019-05-12 21:31:52.473 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - ==> Parameters: 1(Integer)
+2019-05-12 21:31:52.481 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.ArticleMapper.selectList - <==      Total: 3
+2019-05-12 21:31:52.484 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==>  Preparing: SELECT title,imgurl,add_time,updata_time,uid,type,href FROM banner WHERE uid = ? 
+2019-05-12 21:31:52.485 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - ==> Parameters: MnF/9XPJEprPvk/EwSLBAg==(String)
+2019-05-12 21:31:52.487 [http-nio-8080-exec-6] DEBUG com.sunql.blog.mapper.BannerMapper.selectList - <==      Total: 2
+2019-05-12 21:58:02.155 [main] INFO  com.sunql.blog.BlogApplicationTests - Starting BlogApplicationTests on M81OGMXBVOO2F7H with PID 4728 (started by Administrator in J:\work\blog)
+2019-05-12 21:58:02.155 [main] DEBUG com.sunql.blog.BlogApplicationTests - Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-05-12 21:58:02.155 [main] INFO  com.sunql.blog.BlogApplicationTests - The following profiles are active: dev
+2019-05-12 21:58:04.405 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-05-12 21:58:04.670 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-05-12 21:58:05.170 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Banner.
+2019-05-12 21:58:05.233 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Comment.
+2019-05-12 21:58:05.373 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Login.
+2019-05-12 21:58:07.077 [main] INFO  com.sunql.blog.BlogApplicationTests - Started BlogApplicationTests in 5.375 seconds (JVM running for 6.492)
+2019-05-12 21:58:07.655 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectByMap - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE user_name = ? 
+2019-05-12 21:58:07.717 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectByMap - ==> Parameters: ����(String)
+2019-05-12 21:58:07.748 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectByMap - <==      Total: 3
+2019-05-12 21:58:07.764 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user 
+2019-05-12 21:58:07.764 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectList - ==> Parameters: 
+2019-05-12 21:58:07.764 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectList - <==      Total: 3
+2019-05-12 21:58:07.780 [main] DEBUG com.sunql.blog.mapper.UserMapper.loginUser - ==>  Preparing: SELECT * FROM user WHERE user_phone=? and user_pwd=? 
+2019-05-12 21:58:07.780 [main] DEBUG com.sunql.blog.mapper.UserMapper.loginUser - ==> Parameters: 18716643045(String), 12345678(String)
+2019-05-12 21:58:07.780 [main] DEBUG com.sunql.blog.mapper.UserMapper.loginUser - <==      Total: 1
+2019-05-12 21:58:07.827 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-05-12 21:58:07.842 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-05-12 22:22:44.255 [main] INFO  com.sunql.blog.BlogApplicationTests - Starting BlogApplicationTests on M81OGMXBVOO2F7H with PID 15004 (started by Administrator in J:\work\blog)
+2019-05-12 22:22:44.255 [main] DEBUG com.sunql.blog.BlogApplicationTests - Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-05-12 22:22:44.270 [main] INFO  com.sunql.blog.BlogApplicationTests - The following profiles are active: prod
+2019-05-12 22:22:46.515 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-05-12 22:22:46.811 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-05-12 22:22:47.280 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Banner.
+2019-05-12 22:22:47.326 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Comment.
+2019-05-12 22:22:47.485 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Login.
+2019-05-12 22:22:49.437 [main] INFO  com.sunql.blog.BlogApplicationTests - Started BlogApplicationTests in 5.641 seconds (JVM running for 6.788)
+2019-05-12 22:22:49.967 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectByMap - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE user_name = ? 
+2019-05-12 22:22:50.046 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectByMap - ==> Parameters: ����(String)
+2019-05-12 22:22:50.092 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectByMap - <==      Total: 3
+2019-05-12 22:22:50.108 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user 
+2019-05-12 22:22:50.108 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectList - ==> Parameters: 
+2019-05-12 22:22:50.124 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectList - <==      Total: 3
+2019-05-12 22:22:50.139 [main] DEBUG com.sunql.blog.mapper.UserMapper.loginUser - ==>  Preparing: SELECT * FROM user WHERE user_phone=? and user_pwd=? 
+2019-05-12 22:22:50.139 [main] DEBUG com.sunql.blog.mapper.UserMapper.loginUser - ==> Parameters: 18716643045(String), 12345678(String)
+2019-05-12 22:22:50.155 [main] DEBUG com.sunql.blog.mapper.UserMapper.loginUser - <==      Total: 1
+2019-05-12 22:22:50.202 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-05-12 22:22:50.217 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-05-12 22:46:19.531 [main] INFO  com.sunql.blog.BlogApplicationTests - Starting BlogApplicationTests on M81OGMXBVOO2F7H with PID 12028 (started by Administrator in J:\work\blog)
+2019-05-12 22:46:19.547 [main] DEBUG com.sunql.blog.BlogApplicationTests - Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-05-12 22:46:19.547 [main] INFO  com.sunql.blog.BlogApplicationTests - The following profiles are active: prod
+2019-05-12 22:46:22.062 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-05-12 22:46:22.390 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-05-12 22:46:22.890 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Banner.
+2019-05-12 22:46:22.937 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Comment.
+2019-05-12 22:46:23.109 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper - Warn: Could not find @TableId in Class: com.sunql.blog.entity.Login.
+2019-05-12 22:46:26.328 [main] INFO  com.sunql.blog.BlogApplicationTests - Started BlogApplicationTests in 7.39 seconds (JVM running for 8.749)
+2019-05-12 22:46:26.921 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectByMap - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE user_name = ? 
+2019-05-12 22:46:26.968 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectByMap - ==> Parameters: ����(String)
+2019-05-12 22:46:27.015 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectByMap - <==      Total: 3
+2019-05-12 22:46:27.046 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user 
+2019-05-12 22:46:27.046 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectList - ==> Parameters: 
+2019-05-12 22:46:27.046 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectList - <==      Total: 3
+2019-05-12 22:46:27.078 [main] DEBUG com.sunql.blog.mapper.UserMapper.loginUser - ==>  Preparing: SELECT * FROM user WHERE user_phone=? and user_pwd=? 
+2019-05-12 22:46:27.078 [main] DEBUG com.sunql.blog.mapper.UserMapper.loginUser - ==> Parameters: 18716643045(String), 12345678(String)
+2019-05-12 22:46:27.078 [main] DEBUG com.sunql.blog.mapper.UserMapper.loginUser - <==      Total: 1
+2019-05-12 22:46:27.140 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-05-12 22:46:27.156 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

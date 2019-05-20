@@ -25,7 +25,7 @@ public interface IUserService extends IService<User> {
      * @param user
      * @return
      */
-    User onRegister(User user);
+    Object onRegister(User user);
 
     /**
      * 验证用户
@@ -67,4 +67,6 @@ public interface IUserService extends IService<User> {
      * @return
      */
     String  onUpdataPhone(String oldphone,String newphone,String code);
+
+    Object userinfo(String uid);
 }

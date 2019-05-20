@@ -3,6 +3,7 @@ package com.sunql.blog.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.sunql.blog.entity.Anthology;
+import com.sunql.blog.entity.Comment;
 import com.sunql.blog.entity.User;
 import com.sunql.blog.mapper.AnthologyMapper;
 import com.sunql.blog.mapper.UserMapper;
@@ -55,19 +56,14 @@ public class AnthologyServiceImpl extends ServiceImpl<AnthologyMapper, Anthology
 
     @Override
     public boolean delAnthology(String uid, String id) {
-        Map<String, Object> map = new HashMap<>();
-        map.put("uid", uid);
-        List<User> users = userMapper.selectByMap(map);
-        if (users != null && users.size() > 0) {
-            Anthology anthology = anthologyMapper.selectById(id);
-            if (anthology != null) {
-                anthologyMapper.deleteById(id);
-                return true;
-            } else {
-                return false;
-            }
-
-        } else {
+        Anthology anthology = anthologyMapper.selectById(id);
+        if (anthology == null) {
+            return false;
+        }
+        if (anthology.getUserId()==uid){
+            anthologyMapper.deleteById(id);
+            return true;
+        }else {
             return false;
         }
     }

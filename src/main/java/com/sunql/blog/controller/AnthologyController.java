@@ -43,7 +43,7 @@ public class AnthologyController extends BaseController {
 
     }
 
-    @ApiOperation("创建文集")
+    @ApiOperation("删除文集")
     @PostMapping(value = "/delanthology")
     public RespEntity delanthology(@RequestParam("uid") String uid,@RequestParam("id") String id){
         boolean isdel=  anthologyService.delAnthology(uid,id);

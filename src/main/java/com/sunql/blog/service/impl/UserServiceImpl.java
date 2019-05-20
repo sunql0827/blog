@@ -1,8 +1,13 @@
 package com.sunql.blog.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.sunql.blog.base.ServiceException;
+import com.sunql.blog.entity.Article;
+import com.sunql.blog.entity.Comment;
 import com.sunql.blog.entity.Login;
 import com.sunql.blog.entity.User;
+import com.sunql.blog.mapper.ArticleMapper;
+import com.sunql.blog.mapper.CommentMapper;
 import com.sunql.blog.mapper.LoginMapper;
 import com.sunql.blog.mapper.UserMapper;
 import com.sunql.blog.service.IUserService;
@@ -14,6 +19,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * <p>
@@ -30,6 +39,10 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     UserMapper userMapper;
     @Autowired
     LoginMapper loginMapper;
+    @Autowired
+    ArticleMapper articleMapper;
+    @Autowired
+    CommentMapper commentMapper;
     /**
      * 登录
      * @param userPhone
@@ -67,16 +80,33 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
      * @return
      */
     @Override
-    public User onRegister(User user) {
+    public Object onRegister(User user) {
         Assert.notNull(user.getUserPhone(), "用户名不能为空");
         Assert.notNull(user.getUserPwd(), "密码不能为空");
 
         User user1= userMapper.selectPhone(user.getUserPhone());
         if (user1==null){
+           Long time=System.currentTimeMillis();
+            String uid = MD5.md5(String.valueOf(time), String.valueOf(user.getUserPhone()));
+            if (uid.contains("/")){
+                String random=String.valueOf(Math.random()*10);
+                uid=uid.replace("/",random);
+            }
+            user.setUid(uid);
+            user.setUserAddress("中国");
+            user.setUserPhoto("http://www.sunql.top/images/basephoto.jpeg");
+            user.setUserSex(1);
+            user.setAddTime(time);
+            user.setUpdataTime(time);
+            user.setUserAge(18);
+
+
             userMapper.insert(user);
             return user;
+        }else{
+            return  "用户已经存在";
         }
-        return null;
+
     }
 
     @Override
@@ -104,5 +134,30 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     @Override
     public String onUpdataPhone(String oldphone, String newphone, String code) {
         return null;
+    }
+
+    @Override
+    public Object userinfo(String uid) {
+        Map<String, Object> data = new ConcurrentHashMap();
+        QueryWrapper<User> queryUserWrapper = new QueryWrapper<>();
+        queryUserWrapper.eq("uid", uid);
+        User users = userMapper.selectOne(queryUserWrapper);
+        if (users!=null){
+            Map<String, Object> map = new HashMap<>();
+            map.put("user_id", uid);
+            QueryWrapper<Article> articleQueryWrapper = new QueryWrapper<>();
+            articleQueryWrapper.eq("user_id", uid);
+            List<Article> articles = articleMapper.selectList(articleQueryWrapper);
+            QueryWrapper<Comment> commentQueryWrapper = new QueryWrapper<>();
+            commentQueryWrapper.eq("uid", uid);
+            List<Comment> comments= commentMapper.selectList(commentQueryWrapper);
+            data.put("user",users);
+            data.put("articles",articles);
+            data.put("comments",comments);
+            return data;
+        }else {
+            return "用户不存在";
+        }
+
     }
 }

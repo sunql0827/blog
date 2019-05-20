@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sunql.blog.mapper.BannerMapper">
+    <select id="loadBanner" resultType="com.sunql.blog.entity.Banner" >
+        SELECT * FROM banner WHERE uid=#{uid}
+    </select>
+    <select id="loadTypeBanner" resultType="com.sunql.blog.entity.Banner">
+        SELECT * FROM banner WHERE type=#{type}
+    </select>
+
+
+</mapper>

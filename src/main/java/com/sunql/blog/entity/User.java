@@ -7,6 +7,11 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.*;
 import lombok.experimental.Accessors;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 /**
  * <p>
  * 
@@ -20,13 +25,17 @@ import lombok.experimental.Accessors;
 @NoArgsConstructor
 @AllArgsConstructor
 @ApiModel("设备")
+@Entity
 @EqualsAndHashCode(callSuper = true)
 @Accessors(chain = true)
 @TableName(value = "user")
 public class User extends BaseEntity {
 
     private static final long serialVersionUID = 1L;
-    private Integer id;
+    @Id
+    @Column(name="id")
+    @GeneratedValue
+    private Integer id=0;
     @ApiModelProperty("添加时间")
     private Long addTime;
     @ApiModelProperty("用户id")

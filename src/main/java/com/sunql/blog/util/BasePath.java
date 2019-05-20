@@ -2,11 +2,13 @@ package com.sunql.blog.util;
 
 import org.springframework.util.ResourceUtils;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.FileNotFoundException;
 
 public class BasePath {
-    public static String IMAGE="images/";
+    public static String IMAGE="/images/upload/";
     public static String BASE_URL="http://www.sunql.top/";
     static BasePath basePath=null;
     public static BasePath getInstance() {
@@ -40,7 +42,7 @@ public class BasePath {
      */
     public String getUploadPath() {
         String path=getAbsolutePath();
-        File upload = new File(path, "static/images/upload/");
+        File upload = new File(path, "static"+IMAGE);
         if (!upload.exists()){
             upload.mkdirs();
         }
@@ -53,7 +55,7 @@ public class BasePath {
      */
     public String getImagePath() {
         String path=getTomcatPath();
-        File upload = new File(path, "/webapps/"+IMAGE);
+        File upload = new File(path, "/webapps"+IMAGE);
         if (!upload.exists()){
             upload.mkdirs();
         }

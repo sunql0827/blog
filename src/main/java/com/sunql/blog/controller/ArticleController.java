@@ -69,12 +69,12 @@ public class ArticleController extends BaseController {
         }
 
     }
-    @ApiOperation("全部博客")
+    @ApiOperation("首页博客")
     @PostMapping(value = "/bloghome")
-    public RespEntity bloghome(){
-        List<Article> articles =articleService.getArticle();
-        if (articles.size()>0){
-            return new RespEntity(RespCode.SUCCESS,articles);
+    public RespEntity bloghome(@RequestParam("uid") String uid){
+        Object data =articleService.getHomeArticle(uid);
+        if (data!=null){
+            return new RespEntity(RespCode.SUCCESS,data);
         }else{
             return new RespEntity(RespCode.WARN,"暂无数据");
         }
@@ -123,6 +123,22 @@ public class ArticleController extends BaseController {
         Map<String, Object> map= articleService.getArticleInfo(id);
         if (map != null && map.size() > 0) {
             return new RespEntity(RespCode.SUCCESS, map);
+        } else {
+            return new RespEntity(RespCode.WARN, "文章不存在，请重新输入");
+        }
+
+    }
+
+    /**
+     * 查询一篇文章
+     *
+     * @return
+     */
+    @PostMapping (value = "/likearticle")
+    public RespEntity onlikearticle(@RequestParam("id") Integer id,@RequestParam("islike") Integer like ){
+       Article article= articleService.onUpdataIslike(id,like);
+        if (article!=null) {
+            return new RespEntity(RespCode.SUCCESS, article);
         } else {
             return new RespEntity(RespCode.WARN, "文章不存在，请重新输入");
         }

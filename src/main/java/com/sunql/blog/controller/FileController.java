@@ -3,9 +3,11 @@ package com.sunql.blog.controller;
 
 import com.sunql.blog.base.RespCode;
 import com.sunql.blog.base.RespEntity;
+import com.sunql.blog.base.ServerConfig;
 import com.sunql.blog.util.BasePath;
 import com.sunql.blog.util.DateUtil;
 import com.sunql.blog.util.FileUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -19,6 +21,8 @@ import java.util.List;
 @Controller
 @RequestMapping("/blog")
 public class FileController {
+    @Autowired
+    private ServerConfig serverConfig;
     //跳转到上传文件的页面
     @RequestMapping(value = "/gouploadimg", method = RequestMethod.GET)
     public String goUploadImg() {
@@ -33,8 +37,8 @@ public class FileController {
         String contentType = file.getContentType();
         //获取文件名（包含后缀名）
         String fileName = file.getOriginalFilename();
-        String filePath = BasePath.getInstance().getImagePath();
-        String msg=BasePath.getInstance().getImageUrl()+fileName;
+        String filePath = BasePath.getInstance().getUploadPath();
+        String msg=serverConfig.getUrl()+ BasePath.IMAGE+fileName;
         try {
             FileUtil.uploadFile(file.getBytes(), filePath, fileName);
         } catch (Exception e) {
@@ -75,8 +79,8 @@ public class FileController {
                 // 这里只是简单例子，文件直接输出到项目路径下。
                 // 实际项目中，文件需要输出到指定位置，需要在增加代码处理。
                 // 还有关于文件格式限制、文件大小限制，详见：中配置。
-              String filename= FileUtil.saveImg(file, BasePath.getInstance().getImagePath());
-              String msg=BasePath.getInstance().getImageUrl()+filename;
+              String filename= FileUtil.saveImg(file, BasePath.getInstance().getUploadPath());
+              String msg=serverConfig.getUrl()+ BasePath.IMAGE+filename;
                 return new RespEntity(RespCode.SUCCESS, msg);
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
@@ -108,10 +112,10 @@ public class FileController {
                 // 实际项目中，文件需要输出到指定位置，需要在增加代码处理。
                 // 还有关于文件格式限制、文件大小限制，详见：中配置。
                 String filename=System.currentTimeMillis()+".jpg";
-                String filiepath=BasePath.getInstance().getImagePath()+ File.separator + filename;
+                String filiepath=BasePath.getInstance().getUploadPath()+ File.separator + filename;
                 boolean isfinish= FileUtil.toGenerateImage(file,filiepath);
                 if (isfinish){
-                    String url=BasePath.getInstance().getImageUrl()+filename;
+                    String url=serverConfig.getUrl()+ BasePath.IMAGE+filename;
                     return new RespEntity(RespCode.SUCCESS, url);
                 }else {
                     return new RespEntity(RespCode.WARN,"上传失败");
@@ -150,7 +154,7 @@ public class FileController {
                     byte[] bytes = file.getBytes();
                     String name= file.getOriginalFilename();
                     String fileName = DateUtil.getTime()+i+ FileUtil.getFileSuffix(name);
-                    String filepath=BasePath.getInstance().getImagePath() + File.separator + fileName;
+                    String filepath=BasePath.getInstance().getUploadPath() + File.separator + fileName;
                     stream = new BufferedOutputStream(new FileOutputStream(new File(filepath)));
                     stream.write(bytes);
                     stream.close();

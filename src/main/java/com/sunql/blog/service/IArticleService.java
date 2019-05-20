@@ -49,13 +49,13 @@ public interface IArticleService extends IService<Article> {
      * @param islike
      * @return
      */
-    boolean onUpdataIslike(boolean islike);
+    Article onUpdataIslike(Integer id,Integer islike);
     /**
      * 记录阅读
      * @param isread
      * @return
      */
-    boolean onUpdataIsread(boolean isread);
+    boolean onUpdataIsread(Integer id,Integer isread);
     /**
      * 是否发布
      * @param user_id
@@ -69,14 +69,18 @@ public interface IArticleService extends IService<Article> {
      * @param comment
      * @return
      */
-    boolean addComment(boolean comment);
+    boolean addComment(Integer id,boolean comment);
 
     /**
      * 获取全部
      * @return
      */
     List<Article> getArticle();
-
+    /**
+     * 获取全部
+     * @return
+     */
+    Object getHomeArticle(String uid);
     /**
      * 根据作者id查找
      * @return

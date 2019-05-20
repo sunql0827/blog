@@ -56,12 +56,29 @@ public class UserController extends BaseController {
      */
     @PostMapping(value = "/register")
     public  RespEntity register(User user){
-        User reultUser=userService.onRegister(user);
-       if(reultUser!=null) {
-           return new RespEntity(RespCode.SUCCESS,reultUser);
-       }else{
-           return new RespEntity(RespCode.WARN,"注册失败");
-       }
+        Object reultUser=userService.onRegister(user);
+
+            if (reultUser!=null){
+                return new RespEntity(RespCode.SUCCESS,reultUser);
+            }else {
+                return new RespEntity(RespCode.WARN,"注册失败");
+            }
+
+    }
+    /**
+     * 查询用户
+     *
+     * @param uid
+     * @return
+     */
+    @PostMapping(value = "/userinfo")
+    public  RespEntity userinfo(@RequestParam("uid") String uid){
+        Object reultUser=userService.userinfo(uid);
+        if(reultUser!=null) {
+            return new RespEntity(RespCode.SUCCESS,reultUser);
+        }else{
+            return new RespEntity(RespCode.WARN,"注册失败");
+        }
 
     }
 

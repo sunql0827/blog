@@ -2,12 +2,8 @@ package com.sunql.blog.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.sunql.blog.entity.Anthology;
-import com.sunql.blog.entity.Article;
-import com.sunql.blog.entity.User;
-import com.sunql.blog.mapper.AnthologyMapper;
-import com.sunql.blog.mapper.ArticleMapper;
-import com.sunql.blog.mapper.UserMapper;
+import com.sunql.blog.entity.*;
+import com.sunql.blog.mapper.*;
 import com.sunql.blog.service.IArticleService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.sunql.blog.util.StringUtil;
@@ -35,12 +31,14 @@ import java.util.concurrent.ConcurrentHashMap;
 public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> implements IArticleService {
     @Autowired
     ArticleMapper articleMapper;
-
     @Autowired
     UserMapper userMapper;
     @Autowired
     AnthologyMapper anthologyMapper;
-
+    @Autowired
+    BannerMapper bannerMapper;
+    @Autowired
+    CommentMapper commentMapper;
     /**
      * 创建文集
      *
@@ -129,12 +127,28 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
 
 
     @Override
-    public boolean onUpdataIslike(boolean islike) {
-        return false;
+    public Article onUpdataIslike(Integer id,Integer islike) {
+        Article article = articleMapper.selectById(id);
+        if (article != null) {
+            if (islike==1){
+              int likes= article.getIslike()+1;
+                article.setIslike(likes);
+            }else if (islike==0&&article.getIslike()>0){
+                int likes= article.getIslike()-1;
+                article.setIslike(likes);
+            }
+
+            articleMapper.updateById(article);
+            return article;
+        } else {
+            return null;
+        }
+
     }
 
     @Override
-    public boolean onUpdataIsread(boolean isread) {
+    public boolean onUpdataIsread(Integer id,Integer isread) {
+
         return false;
     }
 
@@ -152,7 +166,7 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
     }
 
     @Override
-    public boolean addComment(boolean comment) {
+    public boolean addComment(Integer id,boolean comment) {
         return false;
     }
 
@@ -161,6 +175,26 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
         List<Article> articles = articleMapper.selectAll();
 
         return articles;
+    }
+
+    /**
+     * 获取首页
+     * @param uid
+     * @return
+     */
+    @Override
+    public Object getHomeArticle(String uid) {
+        Map<String, Object> data = new ConcurrentHashMap();
+        QueryWrapper<Article> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("type", 1);
+        List<Article> articles = articleMapper.selectList(queryWrapper);
+        data.put("articles", articles);
+        List<Banner> banners = bannerMapper.loadBanner(uid);
+        if (banners.size()==0){
+            banners = bannerMapper.loadTypeBanner(String.valueOf(10));
+        }
+        data.put("banners", banners);
+        return data;
     }
 
     @Override
@@ -183,14 +217,21 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
         if (articles == null) {
             return null;
         }
+        int reads=articles.getIsread()+1;
+        articles.setIsread(reads);
+        articleMapper.updateById(articles);
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("uid", articles.getUserId());
         User users = userMapper.selectOne(queryWrapper);
         if (users == null) {
             return null;
         }
+        QueryWrapper<Comment> queryCommentWrapper = new QueryWrapper<>();
+        queryCommentWrapper.eq("art_id", articles.getId());
+        List<Comment> comments= commentMapper.selectList(queryCommentWrapper);
         data.put("article", articles);
         data.put("user", users);
+        data.put("comments", comments);
         return data;
 
 

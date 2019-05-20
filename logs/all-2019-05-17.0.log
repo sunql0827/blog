@@ -1,0 +1,56 @@
+2019-05-17 11:50:07.389 [main] INFO  com.sunql.blog.BlogApplicationTests - Starting BlogApplicationTests on M81OGMXBVOO2F7H with PID 13896 (started by Administrator in J:\work\blog)
+2019-05-17 11:50:07.389 [main] DEBUG com.sunql.blog.BlogApplicationTests - Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-05-17 11:50:07.389 [main] INFO  com.sunql.blog.BlogApplicationTests - The following profiles are active: prod
+2019-05-17 11:50:10.953 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-05-17 11:50:11.312 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-05-17 11:50:11.422 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-05-17 11:50:11.578 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2019-05-17 11:50:11.593 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-05-17 11:50:11.984 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-05-17 11:50:12.652 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-05-17 11:50:14.012 [main] INFO  org.hibernate.tuple.PojoInstantiator - HHH000182: No default (no-argument) constructor for class: com.sunql.blog.entity.Article (class must be instantiated by Interceptor)
+2019-05-17 11:50:14.043 [main] INFO  org.hibernate.tuple.PojoInstantiator - HHH000182: No default (no-argument) constructor for class: com.sunql.blog.entity.Banner (class must be instantiated by Interceptor)
+2019-05-17 11:50:14.064 [main] INFO  org.hibernate.tuple.PojoInstantiator - HHH000182: No default (no-argument) constructor for class: com.sunql.blog.entity.Anthology (class must be instantiated by Interceptor)
+2019-05-17 11:50:16.467 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-05-17 11:50:17.701 [main] INFO  com.sunql.blog.BlogApplicationTests - Started BlogApplicationTests in 11.124 seconds (JVM running for 12.857)
+2019-05-17 11:50:17.998 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectByMap - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE user_name = ? 
+2019-05-17 11:50:18.045 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectByMap - ==> Parameters: ≤‚ ‘(String)
+2019-05-17 11:50:18.076 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectByMap - <==      Total: 3
+2019-05-17 11:50:18.091 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user 
+2019-05-17 11:50:18.091 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectList - ==> Parameters: 
+2019-05-17 11:50:18.107 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectList - <==      Total: 3
+2019-05-17 11:50:18.107 [main] DEBUG com.sunql.blog.mapper.UserMapper.loginUser - ==>  Preparing: SELECT * FROM user WHERE user_phone=? and user_pwd=? 
+2019-05-17 11:50:18.107 [main] DEBUG com.sunql.blog.mapper.UserMapper.loginUser - ==> Parameters: 18716643045(String), 12345678(String)
+2019-05-17 11:50:18.107 [main] DEBUG com.sunql.blog.mapper.UserMapper.loginUser - <==      Total: 1
+2019-05-17 11:50:18.170 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-05-17 11:50:18.185 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-05-17 12:01:35.198 [main] INFO  com.sunql.blog.BlogApplicationTests - Starting BlogApplicationTests on M81OGMXBVOO2F7H with PID 756 (started by Administrator in J:\work\blog)
+2019-05-17 12:01:35.198 [main] DEBUG com.sunql.blog.BlogApplicationTests - Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-05-17 12:01:35.198 [main] INFO  com.sunql.blog.BlogApplicationTests - The following profiles are active: prod
+2019-05-17 12:01:38.475 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-05-17 12:01:38.799 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-05-17 12:01:38.892 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-05-17 12:01:39.002 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2019-05-17 12:01:39.002 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-05-17 12:01:39.277 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-05-17 12:01:40.063 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-05-17 12:01:40.929 [main] INFO  org.hibernate.tuple.PojoInstantiator - HHH000182: No default (no-argument) constructor for class: com.sunql.blog.entity.Article (class must be instantiated by Interceptor)
+2019-05-17 12:01:40.960 [main] INFO  org.hibernate.tuple.PojoInstantiator - HHH000182: No default (no-argument) constructor for class: com.sunql.blog.entity.Banner (class must be instantiated by Interceptor)
+2019-05-17 12:01:40.992 [main] INFO  org.hibernate.tuple.PojoInstantiator - HHH000182: No default (no-argument) constructor for class: com.sunql.blog.entity.Anthology (class must be instantiated by Interceptor)
+2019-05-17 12:01:42.991 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-05-17 12:01:44.135 [main] INFO  com.sunql.blog.BlogApplicationTests - Started BlogApplicationTests in 9.578 seconds (JVM running for 10.99)
+2019-05-17 12:01:44.338 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectByMap - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user WHERE user_name = ? 
+2019-05-17 12:01:44.385 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectByMap - ==> Parameters: ≤‚ ‘(String)
+2019-05-17 12:01:44.416 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectByMap - <==      Total: 3
+2019-05-17 12:01:44.432 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,add_time,uid,updata_time,user_address,user_age,user_name,user_phone,user_photo,user_pwd,user_sex FROM user 
+2019-05-17 12:01:44.432 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectList - ==> Parameters: 
+2019-05-17 12:01:44.432 [main] DEBUG com.sunql.blog.mapper.UserMapper.selectList - <==      Total: 3
+2019-05-17 12:01:44.447 [main] DEBUG com.sunql.blog.mapper.UserMapper.loginUser - ==>  Preparing: SELECT * FROM user WHERE user_phone=? and user_pwd=? 
+2019-05-17 12:01:44.447 [main] DEBUG com.sunql.blog.mapper.UserMapper.loginUser - ==> Parameters: 18716643045(String), 12345678(String)
+2019-05-17 12:01:44.447 [main] DEBUG com.sunql.blog.mapper.UserMapper.loginUser - <==      Total: 1
+2019-05-17 12:01:44.494 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-05-17 12:01:44.510 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

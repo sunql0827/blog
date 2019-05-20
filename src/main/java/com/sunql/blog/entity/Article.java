@@ -7,6 +7,10 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 /**
  * <p>
  * 
@@ -17,13 +21,16 @@ import lombok.experimental.Accessors;
  */
 @Data
 @Builder
+@Entity
 @EqualsAndHashCode(callSuper = true)
 @Accessors(chain = true)
 public class Article extends BaseEntity {
 
     private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue
     @ApiModelProperty("文章id")
-    private Integer id;
+    private Integer id=0;
     @ApiModelProperty("创建时间")
     private Long addTime;
     @ApiModelProperty("内容")
@@ -33,11 +40,11 @@ public class Article extends BaseEntity {
     @ApiModelProperty("文集")
     private Integer artType;
     @ApiModelProperty("评价条数")
-    private Integer comment;
+    private Integer comment=0;
     @ApiModelProperty("喜欢人数")
-    private Integer islike;
+    private Integer islike=0;
     @ApiModelProperty("阅读人数")
-    private Integer isread;
+    private Integer isread=0;
     @ApiModelProperty("是否发布")
     private Integer isRelease;
     @ApiModelProperty("更新时间")
@@ -45,9 +52,10 @@ public class Article extends BaseEntity {
     @ApiModelProperty("作者id")
     private String userId;
     @ApiModelProperty("字节长度")
-    private Integer words;
+    private Integer words=0;
     @ApiModelProperty("简介")
     private String intro;
-
+    @ApiModelProperty("类型 未发布 0  发布 1")
+    private Integer type;
 
 }
